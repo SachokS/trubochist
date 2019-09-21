@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
 
 @Component({
@@ -14,9 +14,17 @@ export class MainPageComponent implements OnInit {
     'message': ['', Validators.required]
   });
 
-  constructor(private fb: FormBuilder) { }
+  public ourJobs = [];
+  images = [1, 2, 3, 4].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
+
+  constructor(private fb: FormBuilder) {
+  }
 
   ngOnInit() {
+
+    for (let i = 0; i < 10; i++) {
+      this.ourJobs.push('Lorem ipsum dolor sit amet.');
+    }
   }
 
 }

@@ -7,21 +7,27 @@
     margin: 24px auto;
   }
 
-  .our-services {
+  .our-services, .advantages, .feedback {
     &__title {
       font-size: 24px;
-      line-height: 48px;
+      font-family: sans-serif;
+      font-weight: bold;
+      padding-bottom: 12px;
     }
 
     &__container {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
     }
+  }
 
+  .our-services {
     &__service {
-      width: calc(50% - 24px);
+      width: calc(40% - 24px);
       font-size: 16px;
       text-align: center;
+      font-family: Ebrima;
     }
   }
 
@@ -31,17 +37,48 @@
     align-items: center;
     max-width: 1280px;
     margin: 24px auto;
+    font-family: Ebrima;
   }
 
-  .advantages {
-    &__title {
-      font-size: 24px;
-      line-height: 48px;
-    }
-
-    &__container {
+  .advantages{
+    &__list {
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
+
+      .advantage {
+        padding-bottom: 32px;
+
+        &__title {
+          font-weight: bold;
+          font-size: 24px;
+        }
+
+        &__description {
+          font-size: 18px;
+        }
+      }
+
+      .quality {
+        display: flex;
+        &__image{
+          background: url(/assets/images/quality.svg) 0 0 no-repeat;
+          min-width: 80px;
+        }
+
+        &__container {
+
+        }
+      }
+
+      .security {
+        display: flex;
+        &__image{
+          background: url(/assets/images/security.svg) 0 0 no-repeat;
+          width: 80px;
+          height: 80px;
+        }
+      }
     }
   }
 
@@ -52,17 +89,12 @@
     max-width: 1280px;
     margin: 24px auto;
 
-    &__title {
-      font-size: 24px;
-      line-height: 48px;
-    }
-
     &__body {
-
+      font-family: Ebrima;
     }
   }
 
-  .form {
+  /*.form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,5 +103,5 @@
     &__field {
       width: 600px;
     }
-  }
+  }*/
 }
