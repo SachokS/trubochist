@@ -1,15 +1,79 @@
 .header {
+  background-color: #cbcbcb;
 
   &__container {
-    max-width: 1280px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 80px;
+    justify-content: space-between;
     margin: 0 auto;
+    max-width: 1280px;
   }
 
-  &__title {
+  &__logo {
+    background: url(/assets/images/chimney.svg) 0 0 no-repeat;
+    height: 40px;
+    width: 40px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__pages {
+    font-size: 26px;
+    line-height: 56px;
+    display: flex;
+
+    .links {
+      color: black;
+      padding: 0 24px;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        background-color: #CBCACA;
+        cursor: pointer;
+      }
+    }
+
+    .active {
+      border-bottom: 5px solid #FF9E41;
+    }
+  }
+
+  &__contact-info {
+    display: flex;
+
+    .social-links {
+      display: flex;
+
+      &__facebook {
+        background: url(/assets/images/facebook.svg) 0 0 no-repeat;
+        height: 40px;
+        width: 40px;
+        margin-left: 24px;
+      }
+
+      &__instagram {
+        background: url(/assets/images/inst.svg) 0 0 no-repeat;
+        height: 40px;
+        width: 40px;
+        margin-left: 24px;
+      }
+
+      &__youtube {
+        background: url(/assets/images/youtube.svg) 0 0 no-repeat;
+        height: 40px;
+        width: 40px;
+        background-size: contain;
+        margin-left: 24px;
+      }
+    }
+  }
+
+  /*&__title {
     cursor: pointer;
     font-size: 24px;
   }
@@ -32,5 +96,5 @@
     a {
       text-decoration: none;
     }
-  }
+  }*/
 }
