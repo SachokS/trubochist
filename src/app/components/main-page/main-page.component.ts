@@ -14,17 +14,12 @@ export class MainPageComponent implements OnInit {
     'message': ['', Validators.required]
   });
 
-  public ourJobs = [];
-  images = [1, 2, 3, 4].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
+  images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
 
   constructor(private fb: FormBuilder) {
   }
 
   ngOnInit() {
-
-    for (let i = 0; i < 10; i++) {
-      this.ourJobs.push('Lorem ipsum dolor sit amet.');
-    }
   }
 
 }

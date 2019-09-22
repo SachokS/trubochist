@@ -1,10 +1,20 @@
 .about-us{
   &__container {
     display: flex;
+    align-items: center;
+
+    .yandex-map {
+      width: 50%;
+      height: calc(100vh - 245px);
+    }
+  }
+
+  &__info {
+    padding-left: 72px;
+    .name, .phone, .email, .IP, .UNP {
+      font-size: 22px;
+      padding: 6px 0;
+    }
   }
 }
 
-.yandex-map {
-  width: 50%;
-  height: calc(100vh - 200px);
-}

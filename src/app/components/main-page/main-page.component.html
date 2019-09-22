@@ -1,18 +1,23 @@
 <div class="main">
   <div class="main__our-services our-services">
     <div class="our-services__title">
-      Мы осуществляем следующие работы
+      <h2>Мы осуществляем следующие работы</h2>
     </div>
     <div class="our-services__container">
-      <div *ngFor="let ourJob of ourJobs" class="our-services__service">
-        {{ourJob}}
-      </div>
+      <ol class="rounded">
+        <li  class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
+        <li  class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
+        <li  class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
+        <li  class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
+        <li  class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
+        <li  class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
+      </ol>
     </div>
   </div>
 
   <div class="main__advantages advantages">
     <div class="advantages__title">
-      Наши преимущества
+      <h2>Наши преимущества</h2>
     </div>
     <div class="advantages__list">
       <div class="advantage quality">
@@ -42,15 +47,26 @@
   </div>
 
   <div class="main__feedback feedback">
-    <div class="feedback__title">
-      Наши отзывы
+    <!--<div class="feedback__title">
+      <h2>Наши отзывы</h2>
     </div>
     <div class="feedback__body">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, adipisci cupiditate delectus dignissimos
       eaque error facilis impedit incidunt maiores nam possimus quaerat quas qui saepe sequi. Ab asperiores beatae culpa
       fuga inventore laudantium libero magnam numquam, officia omnis porro quaerat reiciendis suscipit, ullam vel vitae
       voluptates! Doloribus ea in quod?
-    </div>
+    </div>-->
+    <ngb-carousel *ngIf="images" style="width: 100%;">
+      <ng-template ngbSlide *ngFor="let image of images">
+          <div class="picsum-img-wrapper" style="width: 100%;">
+            <img [src]="image" alt="Random first slide" style="width: 100%;">
+          </div>
+          <div class="carousel-caption">
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </div>
+      </ng-template>
+    </ngb-carousel>
   </div>
 
   <!--<div class="form" [formGroup]="emailForm">

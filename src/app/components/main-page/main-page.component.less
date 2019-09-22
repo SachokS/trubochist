@@ -23,11 +23,65 @@
   }
 
   .our-services {
-    &__service {
-      width: calc(40% - 24px);
-      font-size: 16px;
-      text-align: center;
-      font-family: Ebrima;
+    &__container {
+      width: 100%;
+      .rounded {
+        counter-reset: li;
+        list-style: none;
+        font: 14px "Trebuchet MS", "Lucida Sans";
+        padding: 0;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        &__list {
+          width: 50%;
+
+          &:nth-child(odd) {
+            padding-right: 48px;
+          }
+        }
+
+        &__link {
+          position: relative;
+          display: block;
+          padding: .4em .4em .4em 2em;
+          margin: .5em 0;
+          background: #DAD2CA;
+          color: #444;
+          text-decoration: none;
+          border-radius: .3em;
+          transition: .3s ease-out;
+          font-size: 18px;
+
+          &:hover {
+            background: #E9E4E0;
+          }
+
+          &:hover:before {
+            transform: rotate(360deg);
+          }
+
+          &:before {
+            content: counter(li);
+            counter-increment: li;
+            position: absolute;
+            left: -1.3em;
+            top: 50%;
+            margin-top: -1em;
+            background: #8FD4C1;
+            height: 2em;
+            width: 2em;
+            line-height: 1.5em;
+            border: .3em solid white;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 2em;
+            transition: all .3s ease-out;
+          }
+        }
+      }
     }
   }
 
@@ -40,7 +94,7 @@
     font-family: Ebrima;
   }
 
-  .advantages{
+  .advantages {
     &__list {
       width: 100%;
       display: flex;
@@ -61,7 +115,8 @@
 
       .quality {
         display: flex;
-        &__image{
+
+        &__image {
           background: url(/assets/images/quality.svg) 0 0 no-repeat;
           min-width: 80px;
         }
@@ -73,7 +128,8 @@
 
       .security {
         display: flex;
-        &__image{
+
+        &__image {
           background: url(/assets/images/security.svg) 0 0 no-repeat;
           width: 80px;
           height: 80px;
