@@ -1,0 +1,45 @@
+.catalog {
+  height: 100%;
+min-height: calc(100vh - 189px);
+
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  &__items {
+    display: flex;
+    .item{
+      margin: 48px auto;
+      box-shadow: 0 0 29px 5px rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
+      max-width: 1280px;
+      padding: 24px;
+      height: 100%;
+      width: calc(33% - 24px);
+      background-color:  #dfe1e6;
+      min-height: 400px;
+    }
+
+    .first {
+      background-image: url(/assets/images/our-work-2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: 40%;
+    }
+
+    .second {
+      background-image: url(/assets/images/our-work-7.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: 60%;
+    }
+
+    .third {
+      background-image: url(/assets/images/our-work-12.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: 60%;
+    }
+  }
+}

@@ -1,80 +1,74 @@
 <div class="main">
-  <div class="main__our-services our-services">
-    <div class="our-services__container">
-      <div class="our-services__title">
-        <h2>Мы осуществляем следующие работы</h2>
-      </div>
-      <div class="our-services__items">
-        <ol class="rounded">
-          <li class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
-          <li class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
-          <li class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
-          <li class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
-          <li class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
-          <li class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
-        </ol>
-      </div>
-    </div>
-  </div>
-
-  <div class="main__advantages advantages">
-    <div class="advantages__container">
-      <div class="advantages__title">
-        <h2>Наши преимущества</h2>
-      </div>
-      <div class="advantages__list">
-        <div class="advantage quality">
-          <div class="quality__image"></div>
-          <div class="quality__container">
-            <div class="advantage__title">
-              Качество и гарантии
-            </div>
-            <div class="advantage__body">
-              Мы не навязываем своих услуг, если в них нет нужды. Но если вы обратились к нам за очисткой дымовых и
-              вентиляционных систем, будьте уверены - свою работу выполним качественно и предоставим на нее гарантии.
-            </div>
-          </div>
+  <div class="main__container">
+    <div class="main__our-services our-services">
+      <div class="our-services__container">
+        <div class="our-services__title">
+          <h2>Мы осуществляем следующие работы</h2>
         </div>
-        <div class="advantage security">
-          <div class="security__image"></div>
-          <div class="security__container">
-            <div class="advantage__title ">
-              Безопасность
-            </div>
-            <div class="advantage__description">
-              Ваша безопасность и спокойствие – наша ответственность.
-            </div>
-          </div>
+        <div class="our-services__items">
+          <ol class="rounded">
+            <li class="rounded__list"><a class="rounded__link">Консультация</a></li>
+            <li class="rounded__list"><a class="rounded__link">Обследование печных труб, дымоходов, печей.</a></li>
+            <li class="rounded__list"><a class="rounded__link">Ремонт дымохода, печи, котла, камина.</a></li>
+            <li class="rounded__list"><a class="rounded__link">Чистка вентиляционных каналов.</a></li>
+            <li class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
+            <li class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
+          </ol>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="main__feedback feedback">
-    <div class="feedback__container">
-      <ngb-carousel *ngIf="images" style="width: 100%;">
-        <ng-template ngbSlide *ngFor="let image of images">
-          <div class="picsum-img-wrapper" style="width: 100%;">
-            <img [src]="image" alt="Random first slide" style="width: 100%;">
+    <div class="main__advantages advantages">
+      <div class="advantages__container">
+        <div class="advantages__title">
+          <h2>Работая с нами, Вы получаете</h2>
+        </div>
+        <div class="advantages__list">
+          <div class="advantage quality">
+            <div class="quality__image"></div>
+            <div class="quality__container">
+              <div class="advantage__title">
+                Качество и гарантии
+              </div>
+              <div class="advantage__body">
+                Мы не навязываем своих услуг, если в них нет нужды. Но если вы обратились к нам за очисткой дымовых и
+                вентиляционных систем, будьте уверены - свою работу выполним качественно и предоставим на нее гарантии.
+              </div>
+            </div>
           </div>
-          <div class="carousel-caption">
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <div class="advantage security">
+            <div class="security__image"></div>
+            <div class="security__container">
+              <div class="advantage__title ">
+                Безопасность
+              </div>
+              <div class="advantage__description">
+                Ваша безопасность и спокойствие – наша ответственность.
+              </div>
+            </div>
           </div>
-        </ng-template>
-      </ngb-carousel>
+        </div>
+      </div>
+    </div>
+
+    <div class="main__feedback feedback">
+      <div class="feedback__title">
+        <h2>С нами сотрудничают</h2>
+      </div>
+      <div class="feedback__container">
+        <ngb-carousel *ngIf="images" style="width: 100%;">
+          <ng-template ngbSlide *ngFor="let image of images">
+            <div class="picsum-img-wrapper" style="width: 100%;">
+              <img [src]="image" alt="Random first slide" style="width: 100%;">
+            </div>
+            <div class="carousel-caption">
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
     </div>
   </div>
 
-  <!-- <div class="form" [formGroup]="emailForm">
-     <mat-form-field class="form__field">
-       <input matInput placeholder="Ваше имя" formControlName="name">
-     </mat-form-field>
-     <mat-form-field class="form__field">
-       <input matInput placeholder="Email" formControlName="email">
-     </mat-form-field>
-     <mat-form-field class="form__field">
-       <textarea matInput placeholder="Сообщение" formControlName="message"></textarea>
-     </mat-form-field>
-   </div>-->
 </div>

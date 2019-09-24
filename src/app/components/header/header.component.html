@@ -17,24 +17,20 @@
         </div>
       </div>
     </div>
+    <div class="header__phone phone">
+      <div class="phone__icon"></div>
+      <div class="phone__number">
+        <a class="phone__number" href="tel: +375296030773">+375296030773</a>
+      </div>
+    </div>
     <div class="header__contact-info">
-      <button mat-raised-button color="accent">Задать вопрос</button>
       <div class="social-links">
-        <div class="social-links__facebook"></div>
-        <div class="social-links__instagram"></div>
-        <div class="social-links__youtube"></div>
+        <div class="social-links__facebook" (click)="goToSocialNetwork('facebook')"></div>
+<!--        <div class="social-links__vk" (click)="goToSocialNetwork('vk')"></div>-->
+        <div class="social-links__telegram" (click)="goToSocialNetwork('telegram')"></div>
+<!--        <div class="social-links__instagram" (click)="goToSocialNetwork('instagram')"></div>-->
+        <div class="social-links__youtube" (click)="goToSocialNetwork('youtube')"></div>
       </div>
     </div>
   </div>
-  <!--<div class="header__container">
-    <div class="header__title" routerLink="/">
-      Чистим911
-    </div>
-    <div class="header__phone-number">
-      +375296180164
-    </div>
-    <div class="header__whatsapp">
-      <a href="https://api.whatsapp.com/send?phone=375296566401">Написать в WhatsApp</a>
-    </div>
-  </div>-->
 </header>

@@ -1,5 +1,6 @@
 .footer {
-  background-color: #cbcbcb;
+  padding: 32px 0 24px;
+  background: #dbdfe1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,27 +8,38 @@
 
   .social-links {
     display: flex;
+    cursor: pointer;
+
+    .social-icon {
+      height: 40px;
+      width: 40px;
+      margin-left: 24px;
+      background-size: contain;
+    }
 
     &__facebook {
       background: url(/assets/images/facebook.svg) 0 0 no-repeat;
-      height: 40px;
-      width: 40px;
-      margin-left: 24px;
+      .social-icon();
     }
 
     &__instagram {
-      background: url(/assets/images/inst.svg) 0 0 no-repeat;
-      height: 40px;
-      width: 40px;
-      margin-left: 24px;
+      background: url(/assets/images/instagram.svg) 0 0 no-repeat;
+      .social-icon();
     }
 
     &__youtube {
       background: url(/assets/images/youtube.svg) 0 0 no-repeat;
-      height: 40px;
-      width: 40px;
-      background-size: contain;
-      margin-left: 24px;
+      .social-icon();
+    }
+
+    &__telegram {
+      background: url(/assets/images/telegram.svg) 0 0 no-repeat;
+      .social-icon();
+    }
+
+    &__vk {
+      background: url(/assets/images/vk.svg) 0 0 no-repeat;
+      .social-icon();
     }
   }
 }
