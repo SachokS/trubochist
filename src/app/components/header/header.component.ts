@@ -7,6 +7,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public menuOpened: boolean = false;
+
   constructor() {
   }
 
@@ -31,6 +33,10 @@ export class HeaderComponent implements OnInit {
         window.open('https://vk.com/sachok13');
         break;
     }
+  }
+
+  public openMenu() {
+    this.menuOpened = !this.menuOpened;
   }
 
 }

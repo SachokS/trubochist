@@ -1,12 +1,23 @@
 .header {
-  padding-top: 32px;
+  padding: 0;
   background: #565758;
+
+  .background-image {
+    background: url(/assets/images/chimney.jpg) 0 0 no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    background-position-y: 50%;
+    text-align: center;
+    padding-top: 20px;
+  }
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1280px;
+    padding: 12px 24px 0;
     margin: 0 auto;
   }
 
@@ -91,6 +102,7 @@
 
   &__phone {
     display: flex;
+
     .phone {
       &__icon {
         background: url(/assets/images/phone.svg) 0 0 no-repeat;
@@ -100,33 +112,71 @@
       &__number {
         padding-left: 12px;
         font-size: 26px;
-        color:  #FF9E41;
+        color: #FF9E41;
       }
     }
   }
 
-  /*&__title {
-    cursor: pointer;
-    font-size: 24px;
+  &__small-menu {
+    display: none;
   }
 
-  &__phone-number {
-    font-weight: bold;
-    font-size: 18px;
-  }
+  @media (min-width: 900px) and (max-width: 1280px) {
+    &__container {
 
-  &__whatsapp {
-    color: #ffffff;
-    border: 0 solid #e6ae11;
-    background-color: #27d061;
-    border-radius: 20px;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
-    padding: 16px;
-
-    a {
-      text-decoration: none;
     }
-  }*/
+
+    &__pages {
+      font-size: 22px;
+    }
+
+    &__phone {
+
+      .phone {
+
+        &__number {
+          padding-left: 12px;
+          font-size: 22px;
+          color: #FF9E41;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 899px) {
+
+    &__container {
+      padding: 12px;
+    }
+
+    &__phone, &__pages {
+      display: none;
+    }
+
+    .menu-icon {
+      background: url(/assets/images/menu.svg) 0 0 no-repeat;
+      .social-icon();
+      margin-left: 12px;
+    }
+
+    &__small-menu.opened {
+      display: block;
+
+      .links{
+        padding: 24px;
+        font-size: 22px;
+        color: #FF9E41;
+
+        &:hover {
+          background-color: #ededef;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    .background-image {
+      display: none;
+    }
+  }
 }

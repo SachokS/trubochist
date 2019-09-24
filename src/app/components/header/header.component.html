@@ -16,6 +16,9 @@
           <span>О нас</span>
         </div>
       </div>
+      <div class="menu-icon" (click)="openMenu()">
+        <a href="javascript:void(0);" class="icon" ></a>
+      </div>
     </div>
     <div class="header__phone phone">
       <div class="phone__icon"></div>
@@ -26,11 +29,24 @@
     <div class="header__contact-info">
       <div class="social-links">
         <div class="social-links__facebook" (click)="goToSocialNetwork('facebook')"></div>
-<!--        <div class="social-links__vk" (click)="goToSocialNetwork('vk')"></div>-->
+        <!--        <div class="social-links__vk" (click)="goToSocialNetwork('vk')"></div>-->
         <div class="social-links__telegram" (click)="goToSocialNetwork('telegram')"></div>
-<!--        <div class="social-links__instagram" (click)="goToSocialNetwork('instagram')"></div>-->
+        <!--        <div class="social-links__instagram" (click)="goToSocialNetwork('instagram')"></div>-->
         <div class="social-links__youtube" (click)="goToSocialNetwork('youtube')"></div>
       </div>
     </div>
   </div>
+  <div class="header__small-menu" id="small-menu" [ngClass]="menuOpened ? 'opened' : ''">
+    <div (click)="openMenu()" class="links" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+      <span>Главная</span>
+    </div>
+    <div (click)="openMenu()" class="links" routerLink="/service" routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact:true}">
+      <span>Услуги</span>
+    </div>
+    <div (click)="openMenu()" class="links" routerLink="/about-us" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+      <span>О нас</span>
+    </div>
+  </div>
+  <div class="background-image"><h1>Профессиональные услуги трубочиста</h1></div>
 </header>

@@ -20,6 +20,7 @@
     &__facebook {
       background: url(/assets/images/facebook.svg) 0 0 no-repeat;
       .social-icon();
+      margin: 0;
     }
 
     &__instagram {
@@ -40,6 +41,12 @@
     &__vk {
       background: url(/assets/images/vk.svg) 0 0 no-repeat;
       .social-icon();
+    }
+  }
+
+  @media (max-width: 575px) {
+    .social-links{
+      flex-wrap: wrap;
     }
   }
 }

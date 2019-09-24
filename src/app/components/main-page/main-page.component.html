@@ -3,49 +3,31 @@
     <div class="main__our-services our-services">
       <div class="our-services__container">
         <div class="our-services__title">
-          <h2>Мы осуществляем следующие работы</h2>
+          <h2>Мы выполняем следующие работы:</h2>
         </div>
         <div class="our-services__items">
-          <ol class="rounded">
-            <li class="rounded__list"><a class="rounded__link">Консультация</a></li>
-            <li class="rounded__list"><a class="rounded__link">Обследование печных труб, дымоходов, печей.</a></li>
-            <li class="rounded__list"><a class="rounded__link">Ремонт дымохода, печи, котла, камина.</a></li>
-            <li class="rounded__list"><a class="rounded__link">Чистка вентиляционных каналов.</a></li>
-            <li class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
-            <li class="rounded__list"><a class="rounded__link">Чистка печей, каминов, тандыров</a></li>
-          </ol>
+          <div class="service-item">Чистка, ремонт, монтаж каминов, дымоходов и банных печей</div>
+          <div class="service-item">Обслуживание и проверка, контроль функционирования системы дымохода газовых
+            котлов.
+          </div>
+          <div class="service-item">Выдача актов о проверке вентиляционных и дымоудоляющих систем</div>
+          <div class="service-item">Пуско-наладка газовых и твёрдотоплевных котлов, с сопутствующим обслуживанием.</div>
+          <div class="service-item">Выдача актов предворительного заключения с дальнейшим сопровождением</div>
+          <div class="service-item">Возможность обслуживания точек общепита с газовым и твёрдотоплевным оборудованием.
+          </div>
+          <div class="service-item">Возможность обслуживания как частных, так и юридических лиц</div>
         </div>
       </div>
     </div>
 
-    <div class="main__advantages advantages">
-      <div class="advantages__container">
-        <div class="advantages__title">
-          <h2>Работая с нами, Вы получаете</h2>
+    <div class="main__our-work our-work">
+      <div class="our-work__container">
+        <div class="our-work__title">
+          <h2>Примеры наших работ</h2>
         </div>
-        <div class="advantages__list">
-          <div class="advantage quality">
-            <div class="quality__image"></div>
-            <div class="quality__container">
-              <div class="advantage__title">
-                Качество и гарантии
-              </div>
-              <div class="advantage__body">
-                Мы не навязываем своих услуг, если в них нет нужды. Но если вы обратились к нам за очисткой дымовых и
-                вентиляционных систем, будьте уверены - свою работу выполним качественно и предоставим на нее гарантии.
-              </div>
-            </div>
-          </div>
-          <div class="advantage security">
-            <div class="security__image"></div>
-            <div class="security__container">
-              <div class="advantage__title ">
-                Безопасность
-              </div>
-              <div class="advantage__description">
-                Ваша безопасность и спокойствие – наша ответственность.
-              </div>
-            </div>
+        <div class="our-work__items">
+          <div class="work-item" *ngFor="let image of ourWork">
+            <img [src]="image" alt="" class="work-item__image">
           </div>
         </div>
       </div>
@@ -62,12 +44,15 @@
               <img [src]="image" alt="Random first slide" style="width: 100%;">
             </div>
             <div class="carousel-caption">
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Различные места</h3>
             </div>
           </ng-template>
         </ngb-carousel>
       </div>
+    </div>
+
+    <div class="main__contact-info">
+      Вы можете связаться с нами по телефону: <a class="phone__number" href="tel: +375296030773">+375296030773</a>
     </div>
   </div>
 
