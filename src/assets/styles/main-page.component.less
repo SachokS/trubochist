@@ -1,5 +1,6 @@
-.main {
+@import "../shared-styles/shared-styles.less";
 
+.main {
   .background-image {
     width: 100%;
     text-align: center;
@@ -22,7 +23,7 @@
   }
 
   .our-services, .feedback, .our-work {
-    background-color: #ededef;
+    background-color: @background-color;
     padding: 48px 0 0;
 
     &__title {

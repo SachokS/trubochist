@@ -1,6 +1,8 @@
+@import "../shared-styles/shared-styles.less";
+
 .footer {
   padding: 32px 0 24px;
-  background: #dbdfe1;
+  background: @header-footer-background;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,13 +11,6 @@
   .social-links {
     display: flex;
     cursor: pointer;
-
-    .social-icon {
-      height: 40px;
-      width: 40px;
-      margin-left: 24px;
-      background-size: contain;
-    }
 
     &__facebook {
       background: url(/assets/images/facebook.svg) 0 0 no-repeat;

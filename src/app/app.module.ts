@@ -13,6 +13,7 @@ import {MainPageComponent} from './components/main-page/main-page.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

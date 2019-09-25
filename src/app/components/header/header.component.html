@@ -1,9 +1,6 @@
 <header class="header">
   <div class="header__container">
     <div style="display: flex;align-items: center;">
-      <div routerLink="/" class="header__logo">
-
-      </div>
       <div class="header__pages">
         <div class="links" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
           <span>Главная</span>
@@ -21,8 +18,8 @@
       </div>
     </div>
     <div class="header__phone phone">
-      <div class="phone__icon"></div>
-      <div class="phone__number">
+      <div class="phone__icon" (click)="call()"></div>
+      <div class="phone__number" (click)="call()">
         <a class="phone__number" href="tel: +375296030773">+375296030773</a>
       </div>
     </div>
@@ -48,5 +45,5 @@
       <span>О нас</span>
     </div>
   </div>
-  <div class="background-image"><h1>Профессиональные услуги трубочиста</h1></div>
+  <!--<div class="background-image"><h1>Профессиональные услуги трубочиста</h1></div>-->
 </header>

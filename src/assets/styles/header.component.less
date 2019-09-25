@@ -1,6 +1,8 @@
+@import "../shared-styles/shared-styles.less";
+
 .header {
   padding: 0;
-  background: #565758;
+  //background: @header-footer-background;
 
   .background-image {
     background: url(/assets/images/chimney.jpg) 0 0 no-repeat;
@@ -37,7 +39,7 @@
     display: flex;
 
     .links {
-      color: #FF9E41;
+      color: @links-color;
       padding: 0 24px;
 
       &:focus {
@@ -51,19 +53,12 @@
     }
 
     .active {
-      border-bottom: 5px solid #FF9E41;
+      border-bottom: 5px solid @links-color;
 
       &:hover {
-        border-bottom: 5px solid #FF9E41;
+        border-bottom: 5px solid @links-color;
       }
     }
-  }
-
-  .social-icon {
-    height: 40px;
-    width: 40px;
-    margin-left: 24px;
-    background-size: contain;
   }
 
   &__contact-info {
@@ -112,7 +107,7 @@
       &__number {
         padding-left: 12px;
         font-size: 26px;
-        color: #FF9E41;
+        color: @links-color;
       }
     }
   }
@@ -122,22 +117,16 @@
   }
 
   @media (min-width: 900px) and (max-width: 1280px) {
-    &__container {
-
-    }
-
     &__pages {
       font-size: 22px;
     }
 
     &__phone {
-
       .phone {
-
         &__number {
           padding-left: 12px;
           font-size: 22px;
-          color: #FF9E41;
+          color: @links-color;
         }
       }
     }
@@ -161,14 +150,15 @@
 
     &__small-menu.opened {
       display: block;
+      height: calc(100vh - 65px);
 
-      .links{
+      .links {
         padding: 24px;
         font-size: 22px;
-        color: #FF9E41;
+        color: @links-color;
 
         &:hover {
-          background-color: #ededef;
+          background-color: @background-color;
         }
       }
     }

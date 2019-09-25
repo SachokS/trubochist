@@ -3,7 +3,7 @@ import ymaps from "ymaps";
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
-  styleUrls: ['./about-us.component.less']
+  styleUrls: ['../../../assets/styles/about-us.component.less']
 })
 export class AboutUsComponent implements OnInit {
 

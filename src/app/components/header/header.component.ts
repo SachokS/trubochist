@@ -3,7 +3,7 @@ import {Component, OnInit} from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.less']
+  styleUrls: ['../../../assets/styles/header.component.less']
 })
 export class HeaderComponent implements OnInit {
 
@@ -37,6 +37,12 @@ export class HeaderComponent implements OnInit {
 
   public openMenu() {
     this.menuOpened = !this.menuOpened;
+    this.menuOpened ? document.querySelector('body').style.overflow = 'hidden'
+      : document.querySelector('body').style.overflow = 'unset';
+  }
+
+  public call() {
+    window.open('tel:+375296030773');
   }
 
 }
