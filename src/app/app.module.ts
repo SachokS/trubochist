@@ -14,6 +14,7 @@ import {PageNotFoundComponent} from './components/page-not-found/page-not-found.
 import {ReactiveFormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
+import { OurServicesComponent } from './components/our-services/our-services.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {HttpClientModule} from '@angular/common/http';
     AboutUsComponent,
     CatalogComponent,
     MainPageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    OurServicesComponent
   ],
   imports: [
     BrowserModule,

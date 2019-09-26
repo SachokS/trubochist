@@ -2,34 +2,7 @@
   <div class="main__container">
     <div class="main__our-services our-services">
       <div class="our-services__container">
-        <div class="our-services__title">
-          <h2>Мы выполняем следующие работы:</h2>
-        </div>
-        <div class="our-services__items">
-          <div class="service-item">Чистка, ремонт, монтаж каминов, дымоходов и банных печей</div>
-          <div class="service-item">Обслуживание и проверка, контроль функционирования системы дымохода газовых
-            котлов.
-          </div>
-          <div class="service-item">Выдача актов о проверке вентиляционных и дымоудоляющих систем</div>
-          <div class="service-item">Пуско-наладка газовых и твёрдотоплевных котлов, с сопутствующим обслуживанием.</div>
-          <div class="service-item">Выдача актов предворительного заключения с дальнейшим сопровождением</div>
-          <div class="service-item">Возможность обслуживания точек общепита с газовым и твёрдотоплевным оборудованием.
-          </div>
-          <div class="service-item">Возможность обслуживания как частных, так и юридических лиц</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="main__our-work our-work">
-      <div class="our-work__container">
-        <div class="our-work__title">
-          <h2>Примеры наших работ</h2>
-        </div>
-        <div class="our-work__items">
-          <div class="work-item" *ngFor="let image of ourWork">
-            <img [src]="image" alt="" class="work-item__image">
-          </div>
-        </div>
+        <app-our-services></app-our-services>
       </div>
     </div>
 
@@ -38,21 +11,19 @@
         <h2>С нами сотрудничают</h2>
       </div>
       <div class="feedback__container">
-        <ngb-carousel *ngIf="images" style="width: 100%;">
-          <ng-template ngbSlide *ngFor="let image of images">
-            <div class="picsum-img-wrapper" style="width: 100%;">
-              <img [src]="image" alt="Random first slide" style="width: 100%;">
+        <ngb-carousel *ngIf="images">
+          <ng-template ngbSlide *ngFor="let cafe of cafes">
+            <h2>{{cafe.title}}</h2>
+            <div class="astrodivider"><div class="astrodividermask"></div><span><i>&#10038;</i></span></div>
+            <div class="picsum-img-wrapper">
+              <img [src]="cafe.img" alt="Random first slide">
             </div>
             <div class="carousel-caption">
-              <h3>Различные места</h3>
+
             </div>
           </ng-template>
         </ngb-carousel>
       </div>
-    </div>
-
-    <div class="main__contact-info">
-      Вы можете связаться с нами по телефону: <a class="phone__number" href="tel: +375296030773">+375296030773</a>
     </div>
   </div>
 

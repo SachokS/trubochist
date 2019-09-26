@@ -14,16 +14,16 @@ export class MainPageComponent implements OnInit {
     'message': ['', Validators.required]
   });
 
-  public images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
+  public cafes: [{ title: string, img: any, text: string }] = [];
 
-  public ourWork = [];
+  public images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
 
   constructor(private fb: FormBuilder) {
   }
 
   ngOnInit() {
-    for (let i = 1; i < 6; i++) {
-      this.ourWork.push('/assets/images/our-work-' + i + '.jpg');
+    for (let i = 0; i < 3; i++) {
+      this.cafes.push({title: 'Cafe' + i, img: `https://picsum.photos/900/500?random&t=${Math.random()}`, text: 'Some text' + i});
     }
   }
 

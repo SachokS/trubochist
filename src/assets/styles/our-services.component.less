@@ -1,0 +1,46 @@
+@import "../shared-styles/shared-styles.less";
+
+.services {
+  &__title {
+    margin-left: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__container {
+    .pot {
+      background-image: url(/assets/images/boilers.svg);
+    }
+
+    .chimney {
+      background-image: url(/assets/images/chimney-icon.svg);
+    }
+
+    .check {
+      background-image: url(/assets/images/functional.svg);
+    }
+
+    .act {
+      background-image: url(/assets/images/document.svg);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 12px 48px 12px 0;
+  }
+
+  &__img {
+    .social-icon();
+    margin: 0;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    padding-left: 12px;
+    font-size: 20px;
+  }
+}
