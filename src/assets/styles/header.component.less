@@ -2,17 +2,10 @@
 
 .header {
   padding: 0;
-  //background: @header-footer-background;
-
-  .background-image {
-    background: url(/assets/images/chimney.jpg) 0 0 no-repeat;
-    background-size: cover;
-    height: 400px;
-    width: 100%;
-    background-position-y: 50%;
-    text-align: center;
-    padding-top: 20px;
-  }
+  background: url(/assets/images/chimney-sweep.jpg) no-repeat;
+  background-size: cover;
+  height: 600px;
+  background-position-y: 30%;
 
   &__container {
     display: flex;
@@ -47,7 +40,7 @@
       }
 
       &:hover {
-        border-bottom: 5px solid #CBCACA;
+        color: #CBCACA;
         cursor: pointer;
       }
     }
@@ -151,6 +144,7 @@
     &__small-menu.opened {
       display: block;
       height: calc(100vh - 65px);
+      background: white;
 
       .links {
         padding: 24px;
@@ -161,12 +155,6 @@
           background-color: @background-color;
         }
       }
-    }
-  }
-
-  @media (max-width: 575px) {
-    .background-image {
-      display: none;
     }
   }
 }

@@ -37,8 +37,11 @@ export class HeaderComponent implements OnInit {
 
   public openMenu() {
     this.menuOpened = !this.menuOpened;
-    this.menuOpened ? document.querySelector('body').style.overflow = 'hidden'
-      : document.querySelector('body').style.overflow = 'unset';
+    if (this.menuOpened) {
+      document.querySelector('body').style.overflow = 'hidden';
+    } else {
+      document.querySelector('body').style.overflow = 'unset';
+    }
   }
 
   public call() {
