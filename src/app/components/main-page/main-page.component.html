@@ -13,7 +13,7 @@
       <div class="feedback__container">
         <ngb-carousel *ngIf="images">
           <ng-template ngbSlide *ngFor="let cafe of cafes">
-            <h2>{{cafe.title}}</h2>
+            <h2 style="text-align: center">{{cafe.title}}</h2>
             <div class="astrodivider"><div class="astrodividermask"></div><span><i>&#10038;</i></span></div>
             <div class="picsum-img-wrapper">
               <img [src]="cafe.img" alt="Random first slide">
