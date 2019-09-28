@@ -22,4 +22,35 @@
       }
     }
   }
+
+  @media @max-phone {
+    &__items {
+      display: block;
+      .item {
+        width: 100%;
+        padding: 24px;
+
+        &__images {
+            width: 100%;
+            height: 100%;
+          }
+      }
+    }
+  }
+
+  @media @max-tablet {
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        width: 50%;
+        padding: 24px;
+
+        &__images {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
 }

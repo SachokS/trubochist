@@ -34,7 +34,7 @@
 
     .links {
       color: @links-color;
-      padding: 0 24px;
+      padding: 0 16px;
 
       &:focus {
         outline: none;
@@ -113,7 +113,7 @@
     display: none;
   }
 
-  @media @tablet-screen {
+  @media @max-laptop {
     &__pages {
       font-size: 22px;
     }
@@ -129,13 +129,31 @@
     }
   }
 
-  @media @big-phone-screen {
+  @media @max-phone {
+
+    background-position-x: 18%;
+
+    &__phone {
+      display: none;
+    }
+
+    .our-services {
+      display: none;
+    }
+  }
+
+  @media @max-tablet {
+    height: 500px;
 
     &__container {
       padding: 12px;
     }
 
-    &__phone, &__pages {
+    .our-services {
+
+    }
+
+    &__pages {
       display: none;
     }
 

@@ -11,12 +11,12 @@
         <h2>С нами сотрудничают</h2>
       </div>
       <div class="feedback__container">
-        <ngb-carousel *ngIf="images">
+        <ngb-carousel *ngIf="images" style="width: 100%;">
           <ng-template ngbSlide *ngFor="let cafe of cafes">
             <h2 style="text-align: center">{{cafe.title}}</h2>
             <div class="astrodivider"><div class="astrodividermask"></div><span><i>&#10038;</i></span></div>
-            <div class="picsum-img-wrapper">
-              <img [src]="cafe.img" alt="Random first slide">
+            <div class="picsum-img-wrapper" style="width: 100%;">
+              <img [src]="cafe.img" alt="Random first slide" style="width: 100%;">
             </div>
             <div class="carousel-caption">
 
