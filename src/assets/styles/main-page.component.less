@@ -89,8 +89,8 @@
     padding: 24px;
   }
 
-  @media (max-width: 575px) {
-    padding: 0 12px;
+  @media @max-tablet {
+    padding: 0 24px;
 
     .our-work {
       &__items {
@@ -113,6 +113,15 @@
         .service-item {
           font-size: 16px;
         }
+      }
+    }
+  }
+
+  @media @max-phone {
+    &__container {
+
+      app-our-services {
+        display: block;
       }
     }
   }

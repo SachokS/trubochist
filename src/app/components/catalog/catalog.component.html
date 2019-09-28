@@ -1,5 +1,8 @@
 <div class="catalog">
   <div class="catalog__container">
+    <div class="catalog__our-services">
+      <app-our-services></app-our-services>
+    </div>
     <div class="catalog__items">
       <div class="item" *ngFor="let work of ourWork">
         <img [src]="work" alt="Examples of our work" class="item__images">
