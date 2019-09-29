@@ -43,7 +43,8 @@
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": [
-              "src/assets"
+              "src/assets",
+              "src/favicon.png"
             ],
             "styles": [
               "src/styles.less"
@@ -141,6 +142,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "untitled2"
 }
