@@ -37,15 +37,14 @@
       </div>
     </div>
   </div>
-  <app-our-services class="our-services"></app-our-services>
   <div class="header__small-menu" id="small-menu" [ngClass]="menuOpened ? 'opened' : ''">
     <div (click)="openMenu()" class="links" routerLink="/" routerLinkActive="active"
          [routerLinkActiveOptions]="{exact:true}">
       <span>Главная</span>
     </div>
-    <div (click)="openMenu()" class="links" routerLink="/gallery" routerLinkActive="active"
+    <div (click)="openMenu()" class="links" routerLink="/our-works" routerLinkActive="active"
          [routerLinkActiveOptions]="{exact:true}">
-      <span>Галерея</span>
+      <span>Наши работы</span>
     </div>
     <div (click)="openMenu()" class="links" routerLink="/about-us" routerLinkActive="active"
          [routerLinkActiveOptions]="{exact:true}">

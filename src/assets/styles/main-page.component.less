@@ -1,128 +1,72 @@
 @import "../shared-styles/shared-styles.less";
 
+ngb-carousel.carousel.slide:focus {
+  outline: none;
+}
+
 .main {
-  .background-image {
-    width: 100%;
-    text-align: center;
-    background-image: url(/assets/images/our-work-2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 400px;
+  .head-title {
+
   }
 
-  &__container {
-    margin: 0 auto;
-    max-width: 1280px;
+  .our-advantages {
 
-    app-our-services {
-      display: none;
-    }
-  }
+    .advantages {
+      &__title {
 
-  .feedback {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &__container {
-      &:focus, ngb-carousel.carousel.slide:focus {
-        outline: none;
       }
 
-      .astrodivider {
-        margin: 24px auto;
-        width: 100%;
-        position: relative;
-      }
+      &__container {
+        justify-content: center;
+        flex-wrap: nowrap;
+        padding: 24px 0;
+        .advantage {
+          background-color: red;
+          margin: 0 24px;
 
-      .astrodividermask {
-        overflow: hidden;
-        height: 20px;
-      }
+          .work-tool {
+            background: url(/assets/images/icons/work-tool.svg) 0 0 no-repeat;
+            height: 80px;
+            width: 80px;
+            background-size: cover;
+            margin: 0 auto;
 
-      .astrodividermask:after {
-        content: '';
-        display: block;
-        margin: -25px auto 0;
-        width: 100%;
-        height: 25px;
-        border-radius: 125px / 12px;
-        box-shadow: 0 0 8px @links-color;
-      }
+          }
 
-      .astrodivider span {
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        bottom: 100%;
-        margin-bottom: -25px;
-        left: 50%;
-        margin-left: -25px;
-        border-radius: 100%;
-        box-shadow: 0 2px 4px @links-color;
-        background: #fff;
-      }
+          .work-experience {
+            background: url(/assets/images/icons/work-experience.svg) 0 0 no-repeat;
+            height: 80px;
+            width: 80px;
+            background-size: cover;
+            margin: 0 auto;
+          }
 
-      .astrodivider i {
-        position: absolute;
-        top: 4px;
-        bottom: 4px;
-        left: 4px;
-        right: 4px;
-        border-radius: 100%;
-        border: 1px dashed #68beaa;
-        text-align: center;
-        line-height: 40px;
-        font-style: normal;
-        color: @links-color;
-      }
-    }
+          .quality-adv {
+            background: url(/assets/images/icons/quality-adv.svg) 0 0 no-repeat;
+            height: 80px;
+            width: 80px;
+            background-size: cover;
+            margin: 0 auto;
+          }
 
-    &__body {
-      font-family: Ebrima;
-    }
-  }
-
-  &__contact-info {
-    text-align: center;
-    font-size: 28px;
-    padding: 24px;
-  }
-
-  @media @max-tablet {
-    padding: 0 24px;
-
-    .our-work {
-      &__items {
-        display: block;
-
-        .work-item {
-          margin: 12px auto;
-          box-shadow: none;
-          border-radius: 20px;
-          padding: 12px 0;
-          width: 100%;
-          background-color: transparent;
+          .money {
+            background: url(/assets/images/icons/money.svg) 0 0 no-repeat;
+            height: 80px;
+            width: 80px;
+            background-size: cover;
+            margin: 0 auto;
+          }
         }
       }
     }
 
-    .our-services {
-      &__items {
-
-        .service-item {
-          font-size: 16px;
-        }
-      }
-    }
   }
 
-  @media @max-phone {
-    &__container {
+  .our-works {
 
-      app-our-services {
-        display: block;
-      }
-    }
+  }
+
+  .our-partners {
+
   }
 }

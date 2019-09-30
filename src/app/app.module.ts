@@ -8,7 +8,7 @@ import {MatButtonModule, MatFormFieldModule, MatInputModule} from '@angular/mate
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {AboutUsComponent} from './components/about-us/about-us.component';
-import {CatalogComponent} from './components/catalog/catalog.component';
+import {OurWorksComponent} from './components/our-works/our-works.component';
 import {MainPageComponent} from './components/main-page/main-page.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 import {ReactiveFormsModule} from '@angular/forms';
@@ -23,7 +23,7 @@ import { OurServicesComponent } from './components/our-services/our-services.com
     HeaderComponent,
     FooterComponent,
     AboutUsComponent,
-    CatalogComponent,
+    OurWorksComponent,
     MainPageComponent,
     PageNotFoundComponent,
     OurServicesComponent
