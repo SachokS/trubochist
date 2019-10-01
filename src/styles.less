@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "assets/shared-styles/shared-styles.less";
 
 * {
   padding: 0;
@@ -7,7 +8,7 @@
 }
 
 html, body {
-
+  overflow-x: hidden;
   height: 100%;
 }
 
@@ -26,10 +27,28 @@ h1, h2, h3, h4, h5 {
   width: 100%;
 }
 
-.divider {
+.divider-block {
   position: relative;
   height: 150px;
-  background: linear-gradient(#ff9d2f, #ff6126);
   border-bottom-left-radius: 50% 95%;
   border-bottom-right-radius: 50% 95%;
+  //background: linear-gradient(#ff9d2f, #ff6126);
+
+  &__odd {
+    background: @even-color;
+  }
+
+  &__even {
+    background: @odd-color;
+  }
+}
+
+.divider {
+  &__odd {
+    background: @odd-color;
+  }
+
+  &__even {
+    background: @even-color;
+  }
 }

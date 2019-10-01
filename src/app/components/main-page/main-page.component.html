@@ -4,25 +4,27 @@
       <div class="row d-flex justify-content-center"><h1>Профессиональные услуги трубочиста</h1></div>
     </div>
   </div>
-  <div class="divider"></div>
+  <div class="divider divider__odd">
+    <div class=" divider-block divider-block__odd"></div>
+  </div>
   <div class="our-advantages">
-    <div class="container">
+    <div class="container-fluid">
       <div class="advantages">
         <h2 class="advantages__title">Выбирая нас Вы выбираете:</h2>
         <div class="advantages__container row">
-          <div class="advantage col-3">
+          <div class="advantage col-2">
             <div class="advantage__icon work-tool"></div>
             <div class="advantage__text text-center align-middle"><h4>Современное оборудование и инструменты</h4></div>
           </div>
-          <div class="advantage col-3">
+          <div class="advantage col-2">
             <div class="advantage__icon work-experience"></div>
             <div class="advantage__text text-center align-middle"><h4>Опытных работников</h4></div>
           </div>
-          <div class="advantage col-3">
+          <div class="advantage col-2">
             <div class="advantage__icon quality-adv"></div>
             <div class="advantage__text text-center align-middle"><h4>Высокое качество</h4></div>
           </div>
-          <div class="advantage col-3">
+          <div class="advantage col-2">
             <div class="advantage__icon money"></div>
             <div class="advantage__text text-center align-middle"><h4>Доступная цена</h4></div>
           </div>
@@ -30,20 +32,9 @@
       </div>
     </div>
   </div>
-  <div class="divider"></div>
-  <div class="our-works">
-    <div class="container">
-      <div class="our-works">
-        <h2 class="our-work__title">
-          Мы выполняем следующие работы
-        </h2>
-        <div class="our-works__container row">
-          <app-our-services></app-our-services>
-        </div>
-      </div>
-    </div>
+  <div class="divider divider__even">
+    <div class="divider-block divider-block__even"></div>
   </div>
-  <div class="divider"></div>
   <div class="our-partners">
     <div class="container">
       <div class="row feedback d-flex justify-content-center">
@@ -52,9 +43,9 @@
           <ngb-carousel *ngIf="images" style="width: 100%;">
             <ng-template ngbSlide *ngFor="let cafe of cafes">
               <h2 style="text-align: center">{{cafe.title}}</h2>
-              <div class="astrodivider">
+              <!--<div class="astrodivider">
                 <div class="astrodividermask"></div>
-                <span><i>&#10038;</i></span></div>
+                <span><i>&#10038;</i></span></div>-->
               <div class="picsum-img-wrapper" style="width: 100%;">
                 <img [src]="cafe.img" alt="Random first slide" style="width: 100%;">
               </div>
@@ -63,6 +54,21 @@
               </div>
             </ng-template>
           </ngb-carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divider divider__odd">
+    <div class=" divider-block divider-block__odd"></div>
+  </div>
+  <div class="our-works">
+    <div class="container">
+      <div class="our-works">
+        <h2 class="our-work__title">
+          Мы выполняем следующие работы
+        </h2>
+        <div class="our-works__container row">
+          <app-our-services></app-our-services>
         </div>
       </div>
     </div>

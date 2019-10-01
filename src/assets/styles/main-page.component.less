@@ -6,11 +6,15 @@ ngb-carousel.carousel.slide:focus {
 
 .main {
   .head-title {
-
+    padding: 48px 0 0 0;
+    position: relative;
+    background: @even-color;
   }
 
   .our-advantages {
-
+    padding: 48px 0 0 0;
+    background: @odd-color;
+    position: relative;
     .advantages {
       &__title {
 
@@ -18,16 +22,17 @@ ngb-carousel.carousel.slide:focus {
 
       &__container {
         justify-content: center;
-        flex-wrap: nowrap;
         padding: 24px 0;
+
         .advantage {
-          background-color: red;
+          background-color: rgba(255, 190, 53, 0.7);
           margin: 0 24px;
+          padding: 12px;
 
           .work-tool {
             background: url(/assets/images/icons/work-tool.svg) 0 0 no-repeat;
-            height: 80px;
-            width: 80px;
+            height: 60px;
+            width: 60px;
             background-size: cover;
             margin: 0 auto;
 
@@ -35,24 +40,24 @@ ngb-carousel.carousel.slide:focus {
 
           .work-experience {
             background: url(/assets/images/icons/work-experience.svg) 0 0 no-repeat;
-            height: 80px;
-            width: 80px;
+            height: 60px;
+            width: 60px;
             background-size: cover;
             margin: 0 auto;
           }
 
           .quality-adv {
             background: url(/assets/images/icons/quality-adv.svg) 0 0 no-repeat;
-            height: 80px;
-            width: 80px;
+            height: 60px;
+            width: 60px;
             background-size: cover;
             margin: 0 auto;
           }
 
           .money {
             background: url(/assets/images/icons/money.svg) 0 0 no-repeat;
-            height: 80px;
-            width: 80px;
+            height: 60px;
+            width: 60px;
             background-size: cover;
             margin: 0 auto;
           }
@@ -62,11 +67,15 @@ ngb-carousel.carousel.slide:focus {
 
   }
 
-  .our-works {
-
+  .our-partners {
+    padding: 48px 0 0 0;
+    background: @even-color;
+    position: relative;
   }
 
-  .our-partners {
-
+  .our-works {
+    padding: 48px 0;
+    position: relative;
+    background: @odd-color;
   }
 }
