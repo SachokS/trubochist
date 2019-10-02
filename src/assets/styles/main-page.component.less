@@ -26,8 +26,12 @@ ngb-carousel.carousel.slide:focus {
 
         .advantage {
           background-color: rgba(255, 190, 53, 0.7);
-          margin: 0 24px;
+          margin: 24px;
           padding: 12px;
+          min-height: 200px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
 
           .work-tool {
             background: url(/assets/images/icons/work-tool.svg) 0 0 no-repeat;
@@ -68,7 +72,7 @@ ngb-carousel.carousel.slide:focus {
   }
 
   .our-partners {
-    padding: 48px 0 0 0;
+    padding: 48px 24px;
     background: @even-color;
     position: relative;
   }

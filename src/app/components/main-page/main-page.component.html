@@ -12,19 +12,19 @@
       <div class="advantages">
         <h2 class="advantages__title">Выбирая нас Вы выбираете:</h2>
         <div class="advantages__container row">
-          <div class="advantage col-2">
+          <div class="advantage col-8 col-sm-6 col-lg-4 col-xl-4">
             <div class="advantage__icon work-tool"></div>
             <div class="advantage__text text-center align-middle"><h4>Современное оборудование и инструменты</h4></div>
           </div>
-          <div class="advantage col-2">
+          <div class="advantage col-8 col-sm-6 col-lg-4 col-xl-4">
             <div class="advantage__icon work-experience"></div>
             <div class="advantage__text text-center align-middle"><h4>Опытных работников</h4></div>
           </div>
-          <div class="advantage col-2">
+          <div class="advantage col-8 col-sm-6 col-lg-4 col-xl-4">
             <div class="advantage__icon quality-adv"></div>
             <div class="advantage__text text-center align-middle"><h4>Высокое качество</h4></div>
           </div>
-          <div class="advantage col-2">
+          <div class="advantage col-8 col-sm-6 col-lg-4 col-xl-4">
             <div class="advantage__icon money"></div>
             <div class="advantage__text text-center align-middle"><h4>Доступная цена</h4></div>
           </div>
@@ -40,7 +40,7 @@
       <div class="row feedback d-flex justify-content-center">
         <h2 class="feedback__title">С нами сотрудничают: </h2>
         <div class="feedback__container">
-          <ngb-carousel *ngIf="images" style="width: 100%;">
+          <ngb-carousel *ngIf="images" [showNavigationIndicators]="false" style="width: 100%;">
             <ng-template ngbSlide *ngFor="let cafe of cafes">
               <h2 style="text-align: center">{{cafe.title}}</h2>
               <!--<div class="astrodivider">
@@ -49,9 +49,10 @@
               <div class="picsum-img-wrapper" style="width: 100%;">
                 <img [src]="cafe.img" alt="Random first slide" style="width: 100%;">
               </div>
-              <div class="carousel-caption">
+              <!--<div class="carousel-caption">
                 Text from cafe
-              </div>
+              </div>-->
+              <div>{{cafe.text}}</div>
             </ng-template>
           </ngb-carousel>
         </div>
