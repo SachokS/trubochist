@@ -5,18 +5,13 @@
         <div class="links" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
           <span>Главная</span>
         </div>
-        <div class="links" routerLink="/gallery" routerLinkActive="active"
+        <div class="links" routerLink="/our-work" routerLinkActive="active"
              [routerLinkActiveOptions]="{exact:true}">
-          <span>Галерея</span>
+          <span>Наши работы</span>
         </div>
         <div class="links" routerLink="/about-us" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
           <span>Контакты</span>
         </div>
-        <!--todo Лицензии
-        <div class="links" routerLink="/about-us" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-          <span>Лицензии</span>
-        </div
-        -->
 
       </div>
       <div class="menu-icon" (click)="openMenu()">
@@ -42,7 +37,7 @@
          [routerLinkActiveOptions]="{exact:true}">
       <span>Главная</span>
     </div>
-    <div (click)="openMenu()" class="links" routerLink="/our-works" routerLinkActive="active"
+    <div (click)="openMenu()" class="links" routerLink="/our-work" routerLinkActive="active"
          [routerLinkActiveOptions]="{exact:true}">
       <span>Наши работы</span>
     </div>

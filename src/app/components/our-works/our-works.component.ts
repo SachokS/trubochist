@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-our-works',
@@ -7,8 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OurWorksComponent implements OnInit {
   public ourWork = [];
+  public rivieraWorks = [];
+  public apsLogisticWorks = [];
+  public razdolleWorks = [
+    '/assets/images/razdolle-work-1.jpg',
+    '/assets/images/razdolle-work-2.jpg',
+    '/assets/images/razdolle-work-3.jpg',
+    '/assets/images/razdolle-work-4.jpg'
+  ];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     for (let i = 1; i < 9; i++) {

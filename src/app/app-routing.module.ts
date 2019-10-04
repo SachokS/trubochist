@@ -7,7 +7,7 @@ import {MainPageComponent} from './components/main-page/main-page.component';
 
 
 const routes: Routes = [
-  {path: 'our-works', component: OurWorksComponent},
+  {path: 'our-work', component: OurWorksComponent},
   {path: '', component: MainPageComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: '**', redirectTo: 'error-404'},
