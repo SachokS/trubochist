@@ -8,13 +8,34 @@ ngb-carousel.carousel.slide:focus {
   .head-title {
     padding: 48px 0 0 0;
     position: relative;
-    background: @even-color;
+    background: url(/assets/images/chimney-sweep.jpg) 0 0 no-repeat;
+    background-size: cover;
+    height: 700px;
+    background-position-y: bottom;
+
+    &__title {
+      margin-left: 50%;
+      text-align: right;
+
+      .title {
+        text-align: right;
+        padding: 40px 0;
+      }
+
+      .title-button {
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+        background-color: @odd-color;
+      }
+    }
   }
 
   .our-advantages {
     padding: 48px 0 0 0;
     background: @odd-color;
     position: relative;
+
     .advantages {
       &__title {
 

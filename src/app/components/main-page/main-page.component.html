@@ -1,11 +1,15 @@
 <div class="main">
   <div class="head-title">
     <div class="container">
-      <div class="row d-flex justify-content-center"><h1>Профессиональные услуги трубочиста</h1></div>
+      <div class="head-title__title">
+        <h1 class="title">Профессиональные услуги трубочиста</h1>
+        <h4 class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, nemo.</h4>
+        <button class="title-button" mat-button routerLink="/about-us">Связаться с нами</button>
+      </div>
     </div>
   </div>
   <div class="divider divider__odd">
-    <div class=" divider-block divider-block__odd"></div>
+    <div class=" divider-block divider"></div>
   </div>
   <div class="our-advantages">
     <div class="container-fluid">
@@ -40,7 +44,7 @@
       <div class="row feedback d-flex justify-content-center">
         <h2 class="feedback__title">С нами сотрудничают: </h2>
         <div class="feedback__container">
-          <ngb-carousel *ngIf="images" [showNavigationIndicators]="false" style="width: 100%;">
+          <ngb-carousel *ngIf="cafes" [showNavigationIndicators]="false" style="width: 100%;">
             <ng-template ngbSlide *ngFor="let cafe of cafes">
               <h2 style="text-align: center">{{cafe.title}}</h2>
               <!--<div class="astrodivider">
@@ -64,7 +68,7 @@
   </div>
   <div class="our-works">
     <div class="container">
-      <div class="our-works">
+      <div class="">
         <h2 class="our-work__title">
           Мы выполняем следующие работы
         </h2>

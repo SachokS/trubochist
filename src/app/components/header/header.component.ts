@@ -17,9 +17,6 @@ export class HeaderComponent implements OnInit {
 
   public goToSocialNetwork(nameOfNetwork: string) {
     switch (nameOfNetwork) {
-      case 'vk':
-        window.open('https://vk.com/sachok13');
-        break;
       case 'telegram':
         window.open(' https://t.me/Daymovoy');
         break;
@@ -28,9 +25,6 @@ export class HeaderComponent implements OnInit {
         break;
       case 'instagram':
         window.open('https://www.instagram.com/konstantinkhodnevich/');
-        break;
-      case 'youtube':
-        window.open('https://vk.com/sachok13');
         break;
     }
   }
