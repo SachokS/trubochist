@@ -24,7 +24,7 @@ export class AboutUsComponent implements OnInit {
 
   ngOnInit() {
     ymaps
-      .load()
+      .load('https://api-maps.yandex.ru/2.1/?lang=ru')
       .then(maps => {
         this.map = new maps.Map('yandex-map', {
           center: [53.935632, 27.583230],

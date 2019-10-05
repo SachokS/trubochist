@@ -7,8 +7,15 @@ import {Component, OnInit} from '@angular/core';
 })
 export class OurWorksComponent implements OnInit {
   public ourWork = [];
-  public rivieraWorks = [];
-  public apsLogisticWorks = [];
+  public rivieraWorks = [
+    '/assets/images/our-work-riviera-1.jpg',
+    '/assets/images/our-work-riviera-2.jpg'
+  ];
+  public apsLogisticWorks = [
+    '/assets/images/aps-solver-work-1.jpg',
+    '/assets/images/aps-solver-work-2.jpg',
+    '/assets/images/aps-solver-work-3.jpg',
+  ];
   public razdolleWorks = [
     '/assets/images/razdolle-work-1.jpg',
     '/assets/images/razdolle-work-2.jpg',
@@ -20,7 +27,7 @@ export class OurWorksComponent implements OnInit {
   }
 
   ngOnInit() {
-    for (let i = 1; i < 9; i++) {
+    for (let i = 1; i < 6; i++) {
       this.ourWork.push('/assets/images/work-' + i + '.jpg');
     }
   }
