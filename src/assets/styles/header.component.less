@@ -30,7 +30,7 @@
 
     .links {
       color: @links-color;
-      padding: 0 16px;
+      padding: 0 10px;
 
       &:focus {
         outline: none;
@@ -123,6 +123,10 @@
         }
       }
     }
+
+    &__container {
+      padding: 12px 12px 0;
+    }
   }
 
   @media @max-phone {
@@ -163,6 +167,7 @@
       position: absolute;
       top: 65px;
       width: 100%;
+      z-index: 1;
 
       .links {
         padding: 24px;

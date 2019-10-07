@@ -8,7 +8,7 @@ ngb-carousel.carousel.slide:focus {
   .head-title {
     padding: 48px 0 0 0;
     position: relative;
-    background: url(/assets/images/chimney-sweep.jpg) 0 0 no-repeat;
+    background: url(/assets/images/chimney-sweep.jpg) no-repeat;
     background-size: cover;
     height: 700px;
     background-position-y: bottom;
@@ -102,5 +102,39 @@ ngb-carousel.carousel.slide:focus {
     padding: 48px 0;
     position: relative;
     background: @odd-color;
+  }
+
+  @media @max-laptop {
+    .head-title {
+      padding: 24px 0 0 0;
+      height: 500px;
+
+      &__title {
+        margin-left: 50%;
+        text-align: right;
+
+        .title {
+          text-align: right;
+          padding: 20px 0;
+        }
+      }
+    }
+  }
+
+  @media @max-tablet {
+    .head-title {
+      background: white;
+      height: auto;
+
+      &__title {
+        margin: 0;
+        text-align: right;
+
+        .title {
+          text-align: right;
+          padding: 20px 0;
+        }
+      }
+    }
   }
 }
