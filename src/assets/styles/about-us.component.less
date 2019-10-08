@@ -2,6 +2,7 @@
 
 .about-us {
   padding: 24px 0;
+
   &__container {
 
     .info {
@@ -25,7 +26,14 @@
 
           &__icon {
             background: url(/assets/images/icons/phone.svg) 0 0 no-repeat;
-            .social-icon();
+            height: 40px;
+            width: 40px;
+            margin-left: 24px;
+            background-size: contain;
+
+            @media @max-tablet {
+              margin: 0;
+            }
           }
 
           &__number {
@@ -45,7 +53,13 @@
 
           &__icon {
             background: url(/assets/images/icons/mail.svg) 0 0 no-repeat;
-            .social-icon();
+            height: 40px;
+            width: 40px;
+            margin-left: 24px;
+            background-size: contain;
+            @media @max-tablet {
+              margin: 0;
+            }
           }
 
           &__value {
@@ -60,7 +74,13 @@
 
           &__icon {
             background: url(/assets/images/icons/location.svg) 0 0 no-repeat;
-            .social-icon();
+            height: 40px;
+            width: 40px;
+            margin-left: 24px;
+            background-size: contain;
+            @media @max-tablet {
+              margin: 0;
+            }
           }
 
           &__location {
@@ -77,6 +97,23 @@
         .unp {
           padding: 24px 0 0 24px;
           font-size: 26px;
+        }
+
+        @media @max-tablet {
+          .phone, .email, .address {
+            &__icon {
+              margin: 0;
+            }
+
+            &__value, &__location, &__number {
+              font-size: 22px;
+            }
+          }
+
+          .individual-predpr, .unp {
+            padding: 24px 0 0 0;
+            font-size: 22px;
+          }
         }
       }
 
