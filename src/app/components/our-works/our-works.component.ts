@@ -6,17 +6,12 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['../../../assets/styles/catalog.component.less']
 })
 export class OurWorksComponent implements OnInit {
-  public ourWork = [];
-  public rivieraWorks = [
+  public ourWork = [
     '/assets/images/our-work-riviera-1.jpg',
-    '/assets/images/our-work-riviera-2.jpg'
-  ];
-  public apsLogisticWorks = [
+    '/assets/images/our-work-riviera-2.jpg',
     '/assets/images/aps-solver-work-1.jpg',
     '/assets/images/aps-solver-work-2.jpg',
     '/assets/images/aps-solver-work-3.jpg',
-  ];
-  public razdolleWorks = [
     '/assets/images/razdolle-work-1.jpg',
     '/assets/images/razdolle-work-2.jpg',
     '/assets/images/razdolle-work-3.jpg',
