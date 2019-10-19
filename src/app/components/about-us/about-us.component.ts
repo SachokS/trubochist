@@ -20,7 +20,7 @@ export class AboutUsComponent implements OnInit {
     ])],
     phone: ['', Validators.compose([
       Validators.required, Validators.pattern(
-        /^\+375\(?(25|29|33|44)\)?([0-9]{7})$/)
+        /^\+375(25|29|33|44)([0-9]{7})$/)
     ])],
     message: ['', Validators.required]
   });
