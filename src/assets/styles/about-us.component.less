@@ -16,7 +16,8 @@
       &__about-me {
         width: 50%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         padding-left: 48px;
 
@@ -26,8 +27,8 @@
 
           &__icon {
             background: url(/assets/images/icons/phone.svg) 0 0 no-repeat;
-            height: 40px;
-            width: 40px;
+            height: 30px;
+            width: 30px;
             margin-left: 24px;
             background-size: contain;
 
@@ -38,7 +39,7 @@
 
           &__number {
             padding-left: 12px;
-            font-size: 26px;
+            font-size: 22px;
           }
 
           .phone-link {
@@ -53,8 +54,8 @@
 
           &__icon {
             background: url(/assets/images/icons/mail.svg) 0 0 no-repeat;
-            height: 40px;
-            width: 40px;
+            height: 30px;
+            width: 30px;
             margin-left: 24px;
             background-size: contain;
             @media @max-tablet {
@@ -64,7 +65,7 @@
 
           &__value {
             padding-left: 12px;
-            font-size: 26px;
+            font-size: 22px;
           }
         }
 
@@ -74,8 +75,8 @@
 
           &__icon {
             background: url(/assets/images/icons/location.svg) 0 0 no-repeat;
-            height: 40px;
-            width: 40px;
+            height: 30px;
+            width: 30px;
             margin-left: 24px;
             background-size: contain;
             @media @max-tablet {
@@ -85,18 +86,47 @@
 
           &__location {
             padding-left: 12px;
-            font-size: 26px;
+            font-size: 22px;
           }
         }
 
         .individual-predpr {
           padding: 24px 0 0 24px;
-          font-size: 26px;
+          font-size: 22px;
         }
 
         .unp {
           padding: 24px 0 0 24px;
-          font-size: 26px;
+          font-size: 22px;
+        }
+
+        .feedback-form {
+          margin: 20px auto;
+          padding: 10px 40px;
+          //background: #ff9d2f;
+          border-top: 1px solid #ff9d2f;
+          width: 80%;
+
+          .form-heading {
+            padding: 10px;
+            font-size: 22px;
+            text-align: center;
+          }
+      
+          .form {
+            display: flex;
+            flex-direction: column;
+
+            &__button {
+              font-size: 20px;
+              background-color: @odd-color;
+              width: 50%;
+              margin: 0 auto;
+              border: none;
+              border-radius: 2px;
+              padding: 0 16px;
+            }
+          }
         }
 
         @media @max-tablet {

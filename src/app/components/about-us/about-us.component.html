@@ -25,6 +25,24 @@
         </div>
         <div class="individual-predpr"><span class="ip"> ИП: </span>Ходневич Константин Андреевич</div>
         <div class="unp">УНП: 190953454</div>
+
+        <div class="feedback-form">
+          <div class="form-heading">
+            Обратная связь:
+          </div>
+          <div class="form" [formGroup]="emailForm">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Ваше имя" formControlName="name" >
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Email" formControlName="email" >
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <textarea matInput placeholder="Сообщение" formControlName="message" matTextareaAutosize matAutosizeMinRows=4></textarea>
+            </mat-form-field>
+            <button class="form__button" (click)="sendMail()">Отправить</button>
+          </div>
+      </div>
       </div>
     </div>
   </div>

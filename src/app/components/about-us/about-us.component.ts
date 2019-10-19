@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+import {FormBuilder, Validators} from '@angular/forms';
 import ymaps from 'ymaps';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-about-us',
@@ -10,6 +12,15 @@ export class AboutUsComponent implements OnInit {
 
   public map: any;
   public storeLocation;
+
+  public emailForm = this.fb.group({
+    name: [''],
+    email: ['', Validators.required],
+    message: ['', Validators.required]
+  });
+
+  constructor(private fb: FormBuilder, private http: HttpClient) {
+  }
 
   ngOnInit() {
     ymaps
@@ -29,7 +40,16 @@ export class AboutUsComponent implements OnInit {
       })
       .catch(error => console.log('Failed to load Yandex Maps', error));
   }
-
+  sendMail() {
+    let user = {
+      name: this.emailForm.value.name,
+      email: this.emailForm.value.email,
+      mes: this.emailForm.value.message
+    }
+    this.http.post('http://localhost:3000/sendMessage', user).subscribe();
+    alert('Успешно отправлено');
+    window.location.reload();
+  }
   public call() {
     window.open('tel:+375296030773');
   }

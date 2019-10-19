@@ -12,8 +12,10 @@ app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Credentials', true);
   next();
 });
+app.use(bodyParser.json());
 
 app.post("/sendMessage", (req, res) => {
+  let user = req.body;
   let transporter = nodemailer.createTransport({
     service: "Mail.ru",
     auth: {
@@ -25,8 +27,9 @@ app.post("/sendMessage", (req, res) => {
   let message = {
     from: 'Sender Name <stanislav12312@mail.ru>',
     to: 'Recipient <stanislav12312@mail.ru>',
-    subject: 'Вы заказали услуги трубочиста',
-    text: 'Hello to myself!',
+    subject: user.name + ' заказал услуги трубочиста',
+    text: 'Пользователь ' + user.name + ' (' + user.email + ') отправил сообщение в форме "Обратная связь": ' + user.mes,
+    html: 'Пользователь <strong>' + user.name + ' (' + user.email + ')</strong> отправил сообщение в форме "Обратная связь": <br>' + user.mes
   };
 
   transporter.sendMail(message, (err, info) => {
