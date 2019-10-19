@@ -31,16 +31,19 @@
             Обратная связь:
           </div>
           <div class="form" [formGroup]="emailForm">
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="">
               <input matInput placeholder="Ваше имя" formControlName="name" >
             </mat-form-field>
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="">
               <input matInput placeholder="Email" formControlName="email" >
             </mat-form-field>
-            <mat-form-field class="example-full-width">
-              <textarea matInput placeholder="Сообщение" formControlName="message" matTextareaAutosize matAutosizeMinRows=4></textarea>
+            <mat-form-field class="">
+              <input matInput placeholder="Телефон" formControlName="phone" >
             </mat-form-field>
-            <button class="form__button" (click)="sendMail()">Отправить</button>
+            <mat-form-field class="example-full-width">
+              <textarea matInput placeholder="Сообщение" formControlName="message"></textarea> <!-- matTextareaAutosize matAutosizeMinRows=4 -->
+            </mat-form-field>
+            <button class="form__button" (click)="sendMail()" [disabled]="!emailForm.valid">Отправить</button>
           </div>
       </div>
       </div>

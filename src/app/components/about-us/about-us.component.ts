@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, Validators} from '@angular/forms';
+import {FormBuilder, Validators, EmailValidator} from '@angular/forms';
 import ymaps from 'ymaps';
 import {HttpClient} from '@angular/common/http';
 
@@ -14,8 +14,14 @@ export class AboutUsComponent implements OnInit {
   public storeLocation;
 
   public emailForm = this.fb.group({
-    name: [''],
-    email: ['', Validators.required],
+    name: ['', Validators.required],
+    email: ['', Validators.compose([
+      Validators.required, Validators.email
+    ])],
+    phone: ['', Validators.compose([
+      Validators.required, Validators.pattern(
+        /^\+375\(?(25|29|33|44)\)?([0-9]{7})$/)
+    ])],
     message: ['', Validators.required]
   });
 
@@ -44,10 +50,11 @@ export class AboutUsComponent implements OnInit {
     let user = {
       name: this.emailForm.value.name,
       email: this.emailForm.value.email,
+      phone: this.emailForm.value.phone,
       mes: this.emailForm.value.message
     }
     this.http.post('http://localhost:3000/sendMessage', user).subscribe();
-    alert('Успешно отправлено');
+    //alert('Успешно отправлено');
     window.location.reload();
   }
   public call() {

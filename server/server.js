@@ -28,8 +28,8 @@ app.post("/sendMessage", (req, res) => {
     from: 'Sender Name <stanislav12312@mail.ru>',
     to: 'Recipient <stanislav12312@mail.ru>',
     subject: user.name + ' заказал услуги трубочиста',
-    text: 'Пользователь ' + user.name + ' (' + user.email + ') отправил сообщение в форме "Обратная связь": ' + user.mes,
-    html: 'Пользователь <strong>' + user.name + ' (' + user.email + ')</strong> отправил сообщение в форме "Обратная связь": <br>' + user.mes
+    text: 'Пользователь ' + user.name + ' (' + user.email + ') отправил сообщение в форме "Обратная связь": ' + user.mes + ' Телефон: ' + user.phone,
+    html: 'Пользователь <strong>' + user.name + ' (' + user.email + ')</strong> отправил сообщение в форме "Обратная связь": <br>' + user.mes + '<br>Телефон: ' + user.phone
   };
 
   transporter.sendMail(message, (err, info) => {
