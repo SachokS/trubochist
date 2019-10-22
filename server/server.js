@@ -17,10 +17,10 @@ app.use(bodyParser.json());
 app.post("/sendMessage", (req, res) => {
   let user = req.body;
   let transporter = nodemailer.createTransport({
-    service: "Mail.ru",
+    service: "Gmail.com",
     auth: {
-      user: 'stanislav12312@mail.ru',
-      pass: 'stasik123sss13'
+      user: 'chistim911@gmail.com',
+      pass: '13252011leka'
     }
   });
 
