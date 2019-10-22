@@ -25,8 +25,8 @@ app.post("/sendMessage", (req, res) => {
   });
 
   let message = {
-    from: 'Sender Name <stanislav12312@mail.ru>',
-    to: 'Recipient <stanislav12312@mail.ru>',
+    from: 'Sender Name <chistim911@gmail.com>',
+    to: 'Recipient <chistim911@gmail.com>',
     subject: user.name + ' заказал услуги трубочиста',
     text: 'Пользователь ' + user.name + ' (' + user.email + ') отправил сообщение в форме "Обратная связь": ' + user.mes + ' Телефон: ' + user.phone,
     html: 'Пользователь <strong>' + user.name + ' (' + user.email + ')</strong> отправил сообщение в форме "Обратная связь": <br>' + user.mes + '<br>Телефон: ' + user.phone

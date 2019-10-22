@@ -53,7 +53,7 @@ export class AboutUsComponent implements OnInit {
       phone: this.emailForm.value.phone,
       mes: this.emailForm.value.message
     }
-    this.http.post('http://localhost:3000/sendMessage', user).subscribe();
+    this.http.post('http://serv.kominar.by/sendMessage', user).subscribe();
     //alert('Успешно отправлено');
     window.location.reload();
   }
