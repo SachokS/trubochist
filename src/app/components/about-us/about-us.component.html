@@ -32,20 +32,35 @@
           </div>
           <div class="form" [formGroup]="emailForm">
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Ваше имя" formControlName="name" required>
+              <input matInput placeholder="Ваше имя" formControlName="name" required
+                     (change)="change($event)">
+              <mat-error *ngIf="emailForm.controls.name.errors?.required && emailForm.controls.name.touched">
+                Это поле обязательно для заполнения
+              </mat-error>
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Email" formControlName="email" required>
+              <input matInput placeholder="Email" formControlName="email" required
+                     (change)="change($event)">
+              <mat-error *ngIf="emailForm.controls.email.errors?.required && emailForm.controls.email.touched">
+                Это поле обязательно для заполнения
+              </mat-error>
+              <mat-error *ngIf="emailForm.controls.email.errors?.email && emailForm.controls.email.touched">
+                Неправильно ввели email
+              </mat-error>
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Телефон" maxlength="13" formControlName="phone" required>
+              <input matInput placeholder="Телефон" maxlength="13" formControlName="phone" required
+                     (change)="change($event)">
+              <mat-error *ngIf="emailForm.controls.phone.errors?.required && emailForm.controls.phone.touched">
+                Это поле обязательно для заполнения
+              </mat-error>
             </mat-form-field>
             <mat-form-field class="example-full-width">
               <textarea matInput placeholder="Сообщение" formControlName="message"></textarea>
             </mat-form-field>
             <button class="form__button" (click)="sendMail()" [disabled]="!emailForm.valid">Отправить</button>
           </div>
-      </div>
+        </div>
       </div>
     </div>
   </div>

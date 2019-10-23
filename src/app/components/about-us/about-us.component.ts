@@ -12,6 +12,7 @@ export class AboutUsComponent implements OnInit {
 
   public map: any;
   public storeLocation;
+  public messageResult: string;
 
   public emailForm = this.fb.group({
     name: ['', Validators.required],
@@ -45,19 +46,33 @@ export class AboutUsComponent implements OnInit {
         this.map.geoObjects.add(this.storeLocation);
       })
       .catch(error => console.log('Failed to load Yandex Maps', error));
+    // this.emailForm.valueChanges.subscribe((result) => console.log(result));
   }
+
   sendMail() {
-    let user = {
+    const user = {
       name: this.emailForm.value.name,
       email: this.emailForm.value.email,
       phone: this.emailForm.value.phone,
       mes: this.emailForm.value.message
-    }
-    this.http.post('https://kominar.by/mail/', user).subscribe();
-    //alert('Успешно отправлено');
-    //window.location.reload();
+    };
+    this.http.post('https://kominar.by/mail/', user).subscribe((result) => {
+      if (result) {
+        this.emailForm.reset();
+        this.messageResult = 'Ваше сообщение успешно отправлено';
+      }
+    }, error => {
+      this.emailForm.reset();
+      this.messageResult = 'Упс, что-то пошло не так';
+    });
+
   }
+
   public call() {
     window.open('tel:+375296030773');
+  }
+
+  public change(event) {
+    console.log(this.emailForm);
   }
 }
