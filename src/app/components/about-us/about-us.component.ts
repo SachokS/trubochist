@@ -22,7 +22,7 @@ export class AboutUsComponent implements OnInit {
       Validators.required, Validators.pattern(
         /^\+375(25|29|33|44)([0-9]{7})$/)
     ])],
-    message: ['', Validators.required]
+    message: ['']
   });
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
@@ -53,9 +53,9 @@ export class AboutUsComponent implements OnInit {
       phone: this.emailForm.value.phone,
       mes: this.emailForm.value.message
     }
-    this.http.post('http://serv.kominar.by/sendMessage', user).subscribe();
+    this.http.post('https://kominar.by/mail/', user).subscribe();
     //alert('Успешно отправлено');
-    window.location.reload();
+    //window.location.reload();
   }
   public call() {
     window.open('tel:+375296030773');

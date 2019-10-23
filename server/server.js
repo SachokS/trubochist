@@ -6,7 +6,7 @@ const nodemailer = require("nodemailer");
 const app = express();
 
 app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+  res.setHeader('Access-Control-Allow-Origin', 'https://kominar.by');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type,Accept, Authorization');
   res.setHeader('Access-Control-Allow-Credentials', true);
@@ -14,19 +14,19 @@ app.use(function (req, res, next) {
 });
 app.use(bodyParser.json());
 
-app.post("/sendMessage", (req, res) => {
+app.post("/mail", (req, res) => {
   let user = req.body;
   let transporter = nodemailer.createTransport({
-    service: "Gmail.com",
+    service: "gmail",
     auth: {
-      user: 'chistim911@gmail.com',
-      pass: '13252011leka'
+      user: 'kosvoboda@gmail.com',
+      pass: 'gfhjkm0131007rjcnzymetall101'
     }
   });
 
   let message = {
-    from: 'Sender Name <chistim911@gmail.com>',
-    to: 'Recipient <chistim911@gmail.com>',
+    from: 'Sender Name <kosvoboda@gmail.com>',
+    to: 'Recipient <kosvoboda@gmail.com>',
     subject: user.name + ' заказал услуги трубочиста',
     text: 'Пользователь ' + user.name + ' (' + user.email + ') отправил сообщение в форме "Обратная связь": ' + user.mes + ' Телефон: ' + user.phone,
     html: 'Пользователь <strong>' + user.name + ' (' + user.email + ')</strong> отправил сообщение в форме "Обратная связь": <br>' + user.mes + '<br>Телефон: ' + user.phone
