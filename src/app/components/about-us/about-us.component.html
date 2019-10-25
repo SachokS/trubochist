@@ -32,27 +32,24 @@
           </div>
           <div class="form" [formGroup]="emailForm">
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Ваше имя" formControlName="name" required
-                     (change)="change($event)">
+              <input matInput placeholder="Ваше имя" formControlName="name" required>
               <mat-error *ngIf="emailForm.controls.name.errors?.required && emailForm.controls.name.touched">
-                Это поле обязательно для заполнения
+                Это поле обязательно для заполнения.
               </mat-error>
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Email" formControlName="email" required
-                     (change)="change($event)">
+              <input matInput placeholder="Email" formControlName="email" required>
               <mat-error *ngIf="emailForm.controls.email.errors?.required && emailForm.controls.email.touched">
-                Это поле обязательно для заполнения
+                Это поле обязательно для заполнения.
               </mat-error>
               <mat-error *ngIf="emailForm.controls.email.errors?.email && emailForm.controls.email.touched">
-                Неправильно ввели email
+                Неправильно ввели email.
               </mat-error>
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Телефон" maxlength="13" formControlName="phone" required
-                     (change)="change($event)">
+              <input matInput placeholder="Телефон" maxlength="13" formControlName="phone" required>
               <mat-error *ngIf="emailForm.controls.phone.errors?.required && emailForm.controls.phone.touched">
-                Это поле обязательно для заполнения
+                Это поле обязательно для заполнения.
               </mat-error>
             </mat-form-field>
             <mat-form-field class="example-full-width">

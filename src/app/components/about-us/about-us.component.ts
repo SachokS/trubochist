@@ -57,10 +57,8 @@ export class AboutUsComponent implements OnInit {
       mes: this.emailForm.value.message
     };
     this.http.post('https://kominar.by/mail/', user).subscribe((result) => {
-      if (result) {
-        this.emailForm.reset();
-        this.messageResult = 'Ваше сообщение успешно отправлено';
-      }
+      this.emailForm.reset();
+      this.messageResult = 'Ваше сообщение успешно отправлено';
     }, error => {
       this.emailForm.reset();
       this.messageResult = 'Упс, что-то пошло не так';
@@ -70,9 +68,5 @@ export class AboutUsComponent implements OnInit {
 
   public call() {
     window.open('tel:+375296030773');
-  }
-
-  public change(event) {
-    console.log(this.emailForm);
   }
 }

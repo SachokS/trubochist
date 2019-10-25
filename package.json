@@ -27,6 +27,7 @@
     "express": "latest",
     "less": "^3.10.3",
     "nodemailer": "^6.3.0",
+    "prerender-node": "^3.2.5",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "ymaps": "^0.2.1",
