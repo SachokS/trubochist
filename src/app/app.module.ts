@@ -37,7 +37,10 @@ import { OurServicesComponent } from './components/our-services/our-services.com
     MatFormFieldModule,
     MatInputModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    MetrikaModule.forRoot(
+      {id: 55935106, webvisor: true}
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
