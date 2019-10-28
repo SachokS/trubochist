@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, Validators, EmailValidator} from '@angular/forms';
 import ymaps from 'ymaps';
 import {HttpClient} from '@angular/common/http';
+import {Meta} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about-us',
@@ -26,7 +27,9 @@ export class AboutUsComponent implements OnInit {
     message: ['']
   });
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private meta: Meta) {
+    this.meta.updateTag({name: 'title', content: 'Наши контакты'});
+    this.meta.updateTag({name: 'description', content: 'У нас Вы можете заказать услуги по чистке, установке и демонтажу дымоходов'});
   }
 
   ngOnInit() {

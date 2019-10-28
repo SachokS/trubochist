@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Meta} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-our-works',
@@ -18,7 +19,8 @@ export class OurWorksComponent implements OnInit {
     '/assets/images/razdolle-work-4.jpg'
   ];
 
-  constructor() {
+  constructor(private meta: Meta) {
+    this.meta.updateTag({name: 'title', content: 'Примеры наших работ'});
   }
 
   ngOnInit() {

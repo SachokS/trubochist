@@ -15,7 +15,6 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
 import { OurServicesComponent } from './components/our-services/our-services.component';
-import { MetrikaModule } from 'ng-yandex-metrika';
 
 
 @NgModule({
