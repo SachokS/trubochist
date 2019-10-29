@@ -31,7 +31,7 @@ export class OurWorksComponent implements OnInit {
   }
 
   ngOnInit() {
-    for (let i = 1; i < 6; i++) {
+    for (let i = 1; i < 20; i++) {
       this.ourWork.push('/assets/images/work-' + i + '.jpg');
     }
   }
