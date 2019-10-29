@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Meta} from '@angular/platform-browser';
+import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-our-works',
@@ -19,8 +19,15 @@ export class OurWorksComponent implements OnInit {
     '/assets/images/razdolle-work-4.jpg'
   ];
 
-  constructor(private meta: Meta) {
-    this.meta.updateTag({name: 'title', content: 'Примеры наших работ'});
+  constructor(private meta: Meta, private titleService: Title) {
+    this.titleService.setTitle("Примеры работ чистки дымоходов, каминов, котлов в Минске | Трубочист\n");
+    this.meta.addTag({
+      name: 'description',
+      content: 'Ознакомьтесь с примерами работ по очистке,' +
+        ' монтажу и установке дымоходов, котлов и каминов в Минске.' +
+        ' ✓ Доступные цены! ✓ Гарантия качества!' +
+        ' ✓ Профессиональное обслуживание! Наш номер ☎ +375 (29) 603-07-73.'
+    });
   }
 
   ngOnInit() {

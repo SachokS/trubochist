@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Meta} from '@angular/platform-browser';
+import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-main-page',
@@ -10,9 +10,17 @@ export class MainPageComponent implements OnInit {
 
   public cafes = [];
 
-  constructor(private meta: Meta) {
-    this.meta.addTag({name: 'title', content: 'Профессиональные услуги трубочиста'});
-    this.meta.addTag({name: 'description', content: 'У нас Вы можете заказать услуги по чистке, установке и демонтажу дымоходов'});
+  constructor(private meta: Meta, private titleService: Title) {
+    this.titleService.setTitle("Чистка, монтаж, установка дымоходов, " +
+      "каминов в Минске от трубочиста" +
+      " | обслуживание вентиляционных систем " +
+      "| диагностика по низким ценам\n");
+    this.meta.addTag({
+      name: 'description',
+      content: 'Очистка, монтаж и установка дымоходов, каминов и котлов в Минске, ' +
+        'а также профессиональное обслуживание вентиляционных систем по доустпным ценам.' +
+        ' Звоните по телефону ☎ +375 (29) 603-07-73.\n'
+    });
   }
 
   ngOnInit() {
