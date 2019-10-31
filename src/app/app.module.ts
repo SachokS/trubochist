@@ -30,7 +30,7 @@ import {MetrikaModule} from "ng-yandex-metrika";
     OurServicesComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     MatButtonModule,
     BrowserAnimationsModule,
