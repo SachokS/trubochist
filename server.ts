@@ -28,13 +28,44 @@ const app = express();
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://kominar.by');
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost');
+  // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4000');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type,Accept, Authorization');
   res.setHeader('Access-Control-Allow-Credentials', true);
   next();
 });
 app.use(bodyParser.json());
+
+app.post("/mail/", (req, res) => {
+  let user = req.body;
+  let transporter = nodemailer.createTransport({
+    service: "Mail.ru",
+    auth: {
+      user: 'stanislav12312@mail.ru',
+      pass: 'stasik123sss13'
+    }
+  });
+
+  let message = {
+    from: 'Sender Name <stanislav12312@mail.ru>',
+    to: 'Recipient <stanislav12312@mail.ru>',
+    subject: user.name + ' заказал услуги трубочиста',
+    text: 'Пользователь ' + user.name + ' (' + user.email + ') отправил сообщение в форме "Обратная связь": ' + user.mes + ' Телефон: ' + user.phone,
+    html: 'Пользователь <strong>' + user.name + ' (' + user.email + ')</strong> отправил сообщение в форме "Обратная связь": <br>' + user.mes + '<br>Телефон: ' + user.phone
+  };
+
+  transporter.sendMail(message, (err, info) => {
+    if (err) {
+      console.log('Error occurred. ' + err.message);
+      return process.exit(1);
+    }
+
+    console.log('Message sent: %s', info.messageId);
+    // Preview only available when sending through an Ethereal account
+    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+  });
+  console.log(req.body);
+});
 
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');

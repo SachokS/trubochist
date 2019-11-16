@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, Validators, EmailValidator} from '@angular/forms';
+import {FormBuilder, Validators} from '@angular/forms';
 import ymaps from 'ymaps';
 import {HttpClient} from '@angular/common/http';
 import {Meta, Title} from '@angular/platform-browser';

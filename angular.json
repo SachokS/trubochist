@@ -44,7 +44,9 @@
             "aot": false,
             "assets": [
               "src/assets",
-              "src/favicon.png"
+              "src/favicon.png",
+              "src/robots.txt",
+              "src/sitemap.xml"
             ],
             "styles": [
               "src/styles.less"
@@ -108,7 +110,9 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/assets"
+              "src/assets",
+              "src/robots.txt",
+              "src/sitemap.xml"
             ],
             "styles": [
               "src/styles.less"

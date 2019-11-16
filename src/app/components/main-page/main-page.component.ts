@@ -27,7 +27,7 @@ export class MainPageComponent implements OnInit {
     this.cafes = [
       {
         title: '«Ривьера Кантри Клаб»',
-        img: '/assets/images/riviera-country.jpeg'
+        img: '/assets/images/riviera.png'
       },
       {
         title: 'APS Logistic',
@@ -36,7 +36,7 @@ export class MainPageComponent implements OnInit {
       ,
       {
         title: 'Эко-ресторан Раздолле',
-        img: '/assets/images/razdolle.jpg'
+        img: '/assets/images/razdolle-restaurant.png'
 
       }];
   }

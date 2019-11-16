@@ -1,0 +1,3 @@
+User-agent: *
+Host: https://kominar.by
+sitemap: https://kominar.by/sitemap.xml
