@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Meta, Title} from '@angular/platform-browser';
+import {MatDialog} from "@angular/material/dialog";
+import {PhotoDialogComponent} from "../photo-dialog/photo-dialog.component";
 
 @Component({
   selector: 'app-our-works',
@@ -19,7 +21,7 @@ export class OurWorksComponent implements OnInit {
     '/assets/images/razdolle-work-4.jpg'
   ];
 
-  constructor(private meta: Meta, private titleService: Title) {
+  constructor(private meta: Meta, private titleService: Title, public dialog: MatDialog) {
     this.titleService.setTitle("Примеры работ чистки дымоходов, каминов, котлов в Минске | Трубочист\n");
     this.meta.addTag({
       name: 'description',
@@ -34,6 +36,16 @@ export class OurWorksComponent implements OnInit {
     for (let i = 1; i < 20; i++) {
       this.ourWork.push('/assets/images/work-' + i + '.jpg');
     }
+  }
+
+  openDialog(work): void {
+    const dialogRef = this.dialog.open(PhotoDialogComponent, {
+      data: {work: work}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
 }

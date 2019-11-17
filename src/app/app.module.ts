@@ -12,10 +12,11 @@ import {OurWorksComponent} from './components/our-works/our-works.component';
 import {MainPageComponent} from './components/main-page/main-page.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
-import { OurServicesComponent } from './components/our-services/our-services.component';
+import {OurServicesComponent} from './components/our-services/our-services.component';
 import {MetrikaModule} from "ng-yandex-metrika";
+import {MatDialogModule} from '@angular/material/dialog';
+import { PhotoDialogComponent } from './components/photo-dialog/photo-dialog.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {MetrikaModule} from "ng-yandex-metrika";
     OurWorksComponent,
     MainPageComponent,
     PageNotFoundComponent,
-    OurServicesComponent
+    OurServicesComponent,
+    PhotoDialogComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -37,14 +39,15 @@ import {MetrikaModule} from "ng-yandex-metrika";
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    NgbModule,
+    MatDialogModule,
     HttpClientModule,
     MetrikaModule.forRoot(
       {id: 55935106, webvisor: true}
     )
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [PhotoDialogComponent]
 })
 export class AppModule {
 }
