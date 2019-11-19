@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatFormFieldModule, MatInputModule} from '@angular/material';
+import {MatButtonModule, MatExpansionModule, MatFormFieldModule, MatInputModule} from '@angular/material';
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {AboutUsComponent} from './components/about-us/about-us.component';
@@ -34,7 +34,7 @@ import { UslugiComponent } from './components/uslugi/uslugi.component';
     UslugiComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule.withServerTransition({appId: 'serverApp'}),
     AppRoutingModule,
     MatButtonModule,
     BrowserAnimationsModule,
@@ -45,7 +45,8 @@ import { UslugiComponent } from './components/uslugi/uslugi.component';
     HttpClientModule,
     MetrikaModule.forRoot(
       {id: 55935106, webvisor: true}
-    )
+    ),
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent],
