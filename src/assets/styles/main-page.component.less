@@ -62,7 +62,7 @@ ngb-carousel.carousel.slide:focus {
 
           }
 
-          .work-tool{
+          .work-tool {
             background: url(/assets/images/icons/work-tool.svg) 0 0 no-repeat;
           }
 
@@ -91,12 +91,13 @@ ngb-carousel.carousel.slide:focus {
     .feedback__container {
       display: flex;
       justify-content: space-around;
+      flex-wrap: wrap;
       width: 100%;
       padding-top: 24px;
       max-width: 1280px;
 
       .item {
-        max-width: 250px;
+        width: 250px;
         max-height: 150px;
         margin: 0 auto;
         padding: 12px 0 0;
@@ -165,6 +166,14 @@ ngb-carousel.carousel.slide:focus {
 
         .item {
           padding: 12px 0;
+        }
+      }
+    }
+
+    .our-partners {
+      .feedback__container {
+        .item {
+          max-height: unset;
         }
       }
     }

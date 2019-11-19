@@ -90,6 +90,7 @@
 
   &__phone {
     display: flex;
+    align-items: center;
 
     .phone {
       &__icon {
@@ -102,6 +103,11 @@
         font-size: 26px;
         color: @links-color;
       }
+
+      &__container {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 
@@ -111,21 +117,21 @@
 
   @media @max-laptop {
     &__pages {
-      font-size: 22px;
+      font-size: 20px;
     }
 
     &__phone {
       .phone {
         &__number {
           padding-left: 12px;
-          font-size: 22px;
+          font-size: 20px;
           color: @links-color;
         }
       }
     }
 
     &__container {
-      padding: 12px 12px 0;
+      padding: 12px 6px 0;
     }
   }
 

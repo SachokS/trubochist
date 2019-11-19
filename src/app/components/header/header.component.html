@@ -5,9 +5,12 @@
         <div class="links" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
           <span>Главная</span>
         </div>
-        <div class="links" routerLink="/our-work" routerLinkActive="active"
+        <div class="links" routerLink="/our-works" routerLinkActive="active"
              [routerLinkActiveOptions]="{exact:true}">
           <span>Наши работы</span>
+        </div>
+        <div class="links" routerLink="/uslugi" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+          <span>Услуги</span>
         </div>
         <div class="links" routerLink="/about-us" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
           <span>Контакты</span>
@@ -20,8 +23,9 @@
     </div>
     <div class="header__phone phone">
       <div class="phone__icon" (click)="call()"></div>
-      <div class="phone__number" (click)="call()">
+      <div class="phone__container" (click)="call()">
         <a class="phone__number" href="tel: +375296030773">+375 (29) 603-07-73</a>
+        <a class="phone__number" href="tel: +375295163707">+375 (29) 516-37-07</a>
       </div>
     </div>
     <div class="header__contact-info">
@@ -40,6 +44,10 @@
     <div (click)="openMenu()" class="links" routerLink="/our-work" routerLinkActive="active"
          [routerLinkActiveOptions]="{exact:true}">
       <span>Наши работы</span>
+    </div>
+    <div (click)="openMenu()" class="links" routerLink="/uslugi" routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact:true}">
+      <span>Услуги</span>
     </div>
     <div (click)="openMenu()" class="links" routerLink="/about-us" routerLinkActive="active"
          [routerLinkActiveOptions]="{exact:true}">

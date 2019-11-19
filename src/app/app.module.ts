@@ -17,6 +17,7 @@ import {OurServicesComponent} from './components/our-services/our-services.compo
 import {MetrikaModule} from "ng-yandex-metrika";
 import {MatDialogModule} from '@angular/material/dialog';
 import { PhotoDialogComponent } from './components/photo-dialog/photo-dialog.component';
+import { UslugiComponent } from './components/uslugi/uslugi.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { PhotoDialogComponent } from './components/photo-dialog/photo-dialog.com
     PageNotFoundComponent,
     OurServicesComponent,
     PhotoDialogComponent,
+    UslugiComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
