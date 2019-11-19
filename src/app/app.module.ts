@@ -18,6 +18,7 @@ import {MetrikaModule} from "ng-yandex-metrika";
 import {MatDialogModule} from '@angular/material/dialog';
 import { PhotoDialogComponent } from './components/photo-dialog/photo-dialog.component';
 import { UslugiComponent } from './components/uslugi/uslugi.component';
+import { OneServiceComponent } from './components/one-service/one-service.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { UslugiComponent } from './components/uslugi/uslugi.component';
     OurServicesComponent,
     PhotoDialogComponent,
     UslugiComponent,
+    OneServiceComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),
