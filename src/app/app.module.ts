@@ -19,6 +19,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { PhotoDialogComponent } from './components/photo-dialog/photo-dialog.component';
 import { UslugiComponent } from './components/uslugi/uslugi.component';
 import { OneServiceComponent } from './components/one-service/one-service.component';
+import { UslugaComponent } from './components/usluga/usluga.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { OneServiceComponent } from './components/one-service/one-service.compon
     PhotoDialogComponent,
     UslugiComponent,
     OneServiceComponent,
+    UslugaComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),

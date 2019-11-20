@@ -17,7 +17,6 @@ export class OurWorksComponent implements OnInit {
     '/assets/images/aps-solver-work-3.jpg',
     '/assets/images/razdolle-work-1.jpg',
     '/assets/images/razdolle-work-2.jpg',
-    '/assets/images/razdolle-work-3.jpg',
     '/assets/images/razdolle-work-4.jpg'
   ];
 
@@ -33,7 +32,7 @@ export class OurWorksComponent implements OnInit {
   }
 
   ngOnInit() {
-    for (let i = 1; i < 20; i++) {
+    for (let i = 1; i < 19; i++) {
       this.ourWork.push('/assets/images/work-' + i + '.jpg');
     }
   }

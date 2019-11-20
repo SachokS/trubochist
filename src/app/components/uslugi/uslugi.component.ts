@@ -1,10 +1,14 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
+import {CommonService} from "../../services/common.service";
 
 interface Usluga {
   src: string;
   title: string;
   alt: string;
   text: string;
+  link: string;
+  key: number;
 }
 
 @Component({
@@ -17,42 +21,55 @@ export class UslugiComponent implements OnInit {
 
   public uslugi: Usluga[];
 
-  constructor() {
+  constructor(private router: Router, private commonService: CommonService) {
   }
 
   ngOnInit() {
     this.uslugi = [
       {
         title: "Ремонт и очистка каминов",
-        src: "",
+        src: '/assets/images/kamin.jpg',
         alt: "Ремонт и очистка каминов",
-        text: ""
+        text: "",
+        link: "remont-ochistka-kaminov",
+        key: 1
       },
       {
         title: "Ремонт и очистка печей",
-        src: "",
+        src: '/assets/images/pech.jpg',
         alt: "Ремонт и очистка печей",
-        text: ""
+        text: "",
+        link: "remont-ochistka-pechei",
+        key: 2
       },
       {
         title: "Очистка вентиляции",
-        src: "",
+        src: '/assets/images/ventilatia.jpg',
         alt: "Очистка вентиляции",
-        text: ""
+        text: "",
+        link: "ochistka-ventilatii",
+        key: 3
       },
       {
         title: "Монтаж печей и каминов",
-        src: "",
+        src: '/assets/images/kamin-1.jpg',
         alt: "Монтаж печей и каминов",
-        text: ""
+        text: "",
+        link: "montazh-ochistka-kaminov",
+        key: 4
       },
       {
-        title: "Монтаж печей и каминов",
-        src: "",
-        alt: "Монтаж печей и каминов",
-        text: ""
+        title: "Обследование и очистка дымоходов",
+        src: '/assets/images/dymohod.jpg',
+        alt: "Обследование и очистка дымоходов",
+        text: "",
+        link: "obsledovanie-ochistka-dymohodov",
+        key: 5
       }
     ]
   }
 
+  public goToUslugaPage(usluga: Usluga) {
+    this.commonService.usluga = usluga;
+  }
 }
