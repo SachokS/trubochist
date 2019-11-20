@@ -1,0 +1,68 @@
+@import "../shared-styles/shared-styles.less";
+
+.usluga {
+  &__container {
+    max-width: 1280px;
+    margin: 24px auto 0;
+    padding: 0 24px;
+  }
+
+  &__image {
+    margin: 0 auto;
+    float: left;
+    max-width: 600px;
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 600px;
+      max-height: 400px;
+      margin: 0 24px 0 0;
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  &__title {
+    h3 {
+      text-align: left;
+    }
+  }
+
+  &__offer {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  @media @max-phone {
+    &__container {
+      padding: 0 16px;
+    }
+
+    &__image {
+      width: 100%;
+      padding-bottom: 24px;
+
+      img {
+        margin: 0;
+      }
+    }
+  }
+
+  @media (max-width: 899px) and (min-width: 671px) {
+
+  }
+
+  @media (max-width: 1280px) and (min-width: 900px) {
+
+  }
+
+}

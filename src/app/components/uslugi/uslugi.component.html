@@ -7,9 +7,9 @@
     </h2>
 
     <div class="uslugi__list row d-flex justify-content-center">
-      <div class="uslugi__item item col-12 col-sm-6 col-lg-4 col-xl-4" *ngFor="let usluga of uslugi">
+      <div class="uslugi__item item" *ngFor="let usluga of uslugi">
         <div class="item__image" [routerLink]="['/uslugi', usluga.link]" (click)="goToUslugaPage(usluga)">
-          <img [src]="usluga.src" alt="{{usluga.alt}}"> сделать при наведении слово "Подробнее"
+          <img [src]="usluga.src" alt="{{usluga.alt}}">
         </div>
         <div class="item__title">
           <h3>{{usluga.title}}</h3>
